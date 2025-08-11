@@ -40,7 +40,6 @@
 .login-btn {
     background-color: #f1c40f;
     color: #000;
-    font-weight: bold;
     border-radius: 5px;
     width: 100%;
     text-align: left;
@@ -64,6 +63,7 @@
     display: block; 
     text-align: left; 
     color: #000;
+    font-weight:bold;
     font-size: 14px;
 }
 .login-error {
