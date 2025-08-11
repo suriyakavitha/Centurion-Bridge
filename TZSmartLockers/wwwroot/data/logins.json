@@ -1,0 +1,24 @@
+[
+  {
+    "UserName": "Admin",
+    "Value1": "0.00",
+    "Value2": "0.00",
+    "Value3": "0.00",
+    "Permissions": {
+      "Devices": true,
+      "System": false,
+      "Alarm Configuration": false
+    }
+  },
+  {
+    "UserName": "Person",
+    "Value1": "0.00",
+    "Value2": "0.00",
+    "Value3": "0.00",
+    "Permissions": {
+      "Devices": false,
+      "System": true,
+      "Alarm Configuration": false
+    }
+  }
+]
