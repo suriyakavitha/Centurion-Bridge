@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Logins";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <h1 class="fw-bold mb-3" style="font-size: 2rem;">Logins</h1>
+
+    <div class="card shadow-sm" style="border-radius: 12px;">
+        <div class="table-responsive">
+            <table class="table table-sm align-middle mb-0">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Something</th>
+                        <th>Something</th>
+                        <th>Something</th>
+                        <th>Permissions</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTableBody">
+                    <tr>
+                        <td>Admin</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" checked>
+                                <label class="form-check-label">Devices</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">System</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">Alarm Configuration</label>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-secondary">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Person</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">Devices</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" checked>
+                                <label class="form-check-label">System</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label">Alarm Configuration</label>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-secondary">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center py-3" style="border-top: 1px solid #ddd;">
+            <button class="btn btn-primary">
+                <i class="fa fa-plus me-1"></i> Add User
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Device Status";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <h1 class="fw-bold page-title">Device Status</h1>
+
+    <div class="card shadow-lg" style="border-radius: 12px; background: white;">
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th>Primary Name</th>
+                        <th>Secondary Name</th>
+                        <th>Locked / Unlocked</th>
+                        <th>Timeout</th>
+                        <th>Open / Closed</th>
+                        <th>Input 1</th>
+                        <th>Input 2</th>
+                        <th>Output 1</th>
+                        <th>Output 2</th>
+                    </tr>
+                </thead>
+                <tbody id="deviceTableBody">
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination-wrapper">
+            <div class="pagination-controls">
+                <button disabled>&lt;</button>
+                <span>1</span>
+                <button disabled>&gt;</button>
+            </div>
+            <div class="pagination-counter">1 - 3 of 3 items</div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        fetch('/data/deviceStatus.json')
+            .then(response => response.json())
+            .then(data => {
+                let tableBody = document.getElementById('deviceTableBody');
+                tableBody.innerHTML = "";
+
+                data.forEach(item => {
+                    let lockClass = item.LockStatus.toLowerCase();
+                    let lockIcon;
+
+                    if (item.LockStatus === "Unlocked") {
+                        lockIcon = '<i class="fas fa-lock-open status-icon"></i>';
+                    } else if (item.LockStatus === "Locked") {
+                        lockIcon = '<i class="fas fa-lock status-icon"></i>';
+                    } else if (item.LockStatus === "Error") {
+                        lockIcon = '<i class="fas fa-lock lock-rotate-down status-icon text-warning"></i>';
+                        lockClass = "error";
+                    }
+
+                    let doorClass = item.DoorStatus.toLowerCase();
+                    let doorIcon;
+
+                    if (item.DoorStatus === "Open") {
+                        doorIcon = '<i class="fas fa-door-open status-icon text-success"></i>';
+                    } else if (item.DoorStatus === "Closed") {
+                        doorIcon = '<i class="fas fa-door-closed status-icon text-danger"></i>';
+                    } else if (item.DoorStatus === "Error") {
+                        doorIcon = '<i class="fas fa-exclamation-triangle status-icon text-warning"></i>';
+                        doorClass = "error";
+                    }
+
+                    let row = `
+                        <tr>
+                            <td>${item.PrimaryName}</td>
+                            <td>${item.SecondaryName}</td>
+                            <td class="${lockClass}">${lockIcon} ${item.LockStatus}</td>
+                            <td>${item.Timeout}</td>
+                            <td class="${doorClass}">${doorIcon} ${item.DoorStatus}</td>
+                            <td>${item.Input1 || ''}</td>
+                            <td>${item.Input2 || ''}</td>
+                            <td>${item.Output1 || ''}</td>
+                            <td>${item.Output2 || ''}</td>
+                        </tr>
+                    `;
+                    tableBody.innerHTML += row;
+                });
+            })
+            .catch(error => console.error("Error loading JSON:", error));
+    </script>
+}

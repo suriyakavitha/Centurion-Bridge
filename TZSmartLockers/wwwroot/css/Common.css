@@ -1,0 +1,1953 @@
+﻿/* Only demo */
+@media (max-width: 1000px) {
+    .welcome-message {
+        display: none;
+    }
+}
+
+.btn {
+    min-width: 120px;
+}
+
+.portal-content-bg {
+    background-color: @tz-content-bg;
+}
+
+.portal-text-color {
+    color: @text-color;
+}
+
+.primary-background {
+    background-color: @primary;
+}
+
+.primary-text-color {
+    color: @primary;
+}
+
+.primary-button-text-color {
+    color: @primary-text;
+}
+
+//Fix fontawesome to center
+i.fa {
+    margin: auto;
+}
+
+i.icon-large {
+    font-size: 60px;
+}
+
+.icon-medium i, i.icon-medium {
+    font-size: 30px;
+}
+
+.iconClass {
+    display: none !important;
+}
+
+.default-rounded-corners {
+    .rounded-corners !important;
+}
+
+.upper-default-rounded-corners {
+    .upper-rounded-corners !important;
+}
+
+.lower-default-rounded-corners {
+    .lower-rounded-corners !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// canvas Signature
+
+canvas#newSignature {
+    position: relative;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid @primary;
+    cursor: crosshair;
+    text-align: center;
+    max-width: 100%;
+    display: block;
+}
+
+.viewSignatureImage {
+    margin: 0 auto;
+    background: white;
+    border: 1px solid @primary;
+    max-width: 100%;
+    display: block;
+}
+
+.btn-default {
+    background-color: @default-button-bg;
+}
+/*----- Start TZ Common Layout style -----*/
+
+// menu icon hacks
+// nav.navbar-default.navbar-static-side i.fa-kit {
+    // font-size: 20px;
+    //
+}
+
+.navbar-default .arrow {
+    display: none;
+}
+
+
+.sidebar-collapse .nav > li {
+    margin: 0;
+}
+
+.sidebar-collapse li.nav-header {
+    .upper-rounded-corners;
+}
+
+.sidebar-collapse > ul {
+    .upper-rounded-corners;
+}
+
+#side-menu > li.active, #side-menu > li.active:hover, .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus {
+    // margin: 0px 10px;
+    .rounded-corners(5px);
+}
+
+    #side-menu > li.active > ul.nav, #side-menu > li.active > ul.nav:hover {
+        // margin: 0px 10px;
+        .lower-rounded-corners(5px);
+    }
+
+
+.side-menu-child-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.side-menu-child-icon {
+    margin-right: 10px; /* Adjust the margin as needed */
+    flex-shrink: 0; /* Prevent the icon from shrinking */
+}
+
+.side-menu-child-text {
+    flex: 1;
+}
+
+ul.nav-second-level > li > a i {
+    display: none;
+}
+
+ul.nav-second-level a {
+    color: @menu-selected-text;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-header {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-header {
+        display: none;
+    }
+}
+
+
+.footer.fixed {
+    margin-top: 25px;
+    .top-left-corner;
+    background: @tz-content-bg;
+    //white;
+    border-top: 1px solid @tz-content-bg;
+    //@border-color;
+}
+
+body.fixed-nav #wrapper #page-wrapper {
+    padding-bottom: 50px;
+}
+
+.footer a {
+    color: @text-color;
+}
+
+//Submenu
+.tz-submenu.tabs-container .nav-tabs {
+    // display: flex;
+    justify-content: space-between;
+}
+
+.tz-submenu.tabs-container .nav-tabs > li {
+    // flex: 1;
+    text-align: left;
+}
+
+    .tz-submenu.tabs-container .nav-tabs > li > a, .tz-submenu.tabs-container .nav-tabs > li.active > a {
+        border: none;
+    }
+
+    .tz-submenu.tabs-container .nav-tabs > li > a {
+        border-radius: 0;
+        border-right: 2px solid #fff !important;
+    }
+
+    .tz-submenu.tabs-container .nav-tabs > li:last-child > a, .tz-submenu.tabs-container .nav-tabs > li.active:last-child > a {
+        border-right: none !important;
+    }
+
+.tz-submenu.tabs-container {
+    font-weight: normal;
+}
+
+    .tz-submenu.tabs-container > ul {
+        margin-left: 10px;
+    }
+
+
+    .tz-submenu.tabs-container .nav-tabs > li > a {
+        // padding: 15px 20px 15px 25px;
+        padding: 5px 20px 5px 0px;
+        //add some px to margin so the border looks better margin: 10px 0;
+        font-weight: normal;
+        font-size: 16px;
+    }
+
+
+    .tz-submenu.tabs-container .nav-tabs > li > a {
+    }
+
+        .tz-submenu.tabs-container .nav-tabs > li.active > a, .tz-submenu.tabs-container .nav-tabs > li > a:hover {
+            // .upper-rounded-corners(10px);
+            // .font-bold;
+            // color: @menu-selected-text;
+            // background: @menu-selected-bg;
+            color: @text-color;
+            font-weight: 900;
+            background-color: inherit;
+        }
+
+
+//This is submenu unselected
+.tz-submenu.tabs-container .nav-tabs > li > a {
+    // background: @menu-active-bg;
+}
+
+.tz-submenu.tabs-container .nav-tabs > li > a:hover {
+    // background: @menu-selected-bg !important;
+}
+
+
+//Submenu
+
+.btn-primary-alt {
+    .btn-primary;
+    background-color: @primary-alt;
+}
+
+.btn-secondary {
+    .btn-primary;
+    background-color: @secondary;
+}
+
+.btn-primary, .btn-primary.btn-outline:hover,
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+    color: @primary-text;
+    //@constant-dark;
+}
+
+a,
+.tz-ibox a {
+    color: @text-color;
+    //@primary;
+    //darken(@primary, 10%);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+    .tz-ibox a:hover, .tz-ibox a:focus {
+        color: @text-color;
+        //@primary-hover;
+        //darken(@primary-hover, 10%);
+        text-decoration: underline;
+    }
+
+.nav > li > a, .login-user a {
+    text-decoration: none;
+}
+
+    .login-user a[data-toggle="dropdown"] {
+        cursor: default;
+    }
+
+.tz-ibox a.btn, a.k-link, a.k-link:hover, .tz-ibox .btn, .tz-ibox a.btn:hover, .tz-ibox a.btn:focus, .email-template a, .tz-submenu a {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+
+
+
+//Large top header
+.module-caption i {
+    display: none;
+}
+
+.module-caption h2 {
+    font-size: 35px;
+}
+
+.module-caption h1, .module-caption h2, .module-caption h3, .module-caption h4, .module-caption h5 {
+    font-weight: bold;
+}
+
+.module-caption i.fa, .module-caption i.fal, .module-caption i.fa-kit {
+    padding-right: 20px;
+}
+
+//Large top header
+
+//Page Content wrapper
+
+
+.tz-ibox.ibox {
+    margin: 0 10px;
+}
+
+.tz-ibox.ibox.limitwidth {
+    width: 100%;
+    max-width: 1000px;
+}
+
+@media only screen and (min-width: 1275px) {
+    .tz-ibox.ibox.limitwidth {
+        margin: 0 auto;
+    }
+}
+
+
+.tz-ibox-title.ibox-title {
+    .upper-rounded-corners;
+    background: @tz-content-bg;
+    border-color: @tz-content-bg;
+    padding: 15px 20px 7px 20px;
+}
+
+.tz-ibox-title i {
+    display: none;
+}
+
+    .tz-ibox-title i.fa, .tz-ibox-title i.fa-kit, .tz-ibox-title i.fal {
+        padding-right: 20px;
+    }
+
+.tz-ibox-content.ibox-content h1, .tz-ibox-content.ibox-content h2, .tz-ibox-content.ibox-content h3, .tz-ibox-content.ibox-content h4, .tz-ibox-content.ibox-content h5, .tz-ibox-title.ibox-title h1, .tz-ibox-title.ibox-title h2, .ibox-title h3, .tz-ibox-title.ibox-title h4, .tz-ibox-title.ibox-title h5 {
+    font-weight: bold;
+}
+
+.tz-ibox-content.ibox-content {
+    .lower-rounded-corners;
+    background: @tz-content-bg;
+    border-width: 0 0;
+    margin-bottom: 10px;
+}
+
+.tz-ibox-content-layout.ibox-content-layout {
+    .lower-rounded-corners;
+    background: @tz-content-bg;
+    border-width: 0 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    margin-bottom: 0px;
+}
+
+.key-container {
+    background: @tz-content-bg;
+    margin-right: 10px;
+}
+
+.allocation-type {
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+}
+
+.container-align {
+    padding-right: 80px;
+}
+
+
+.tz-ibox-small-title.ibox-title {
+    .upper-rounded-corners(6px);
+}
+
+
+.tz-ibox-small-content.ibox-content {
+    .lower-rounded-corners(6px);
+}
+
+//Page Content wrapper
+
+//login screen
+.loginscreen.middle-box {
+    width: 500px;
+    padding-top: 100px;
+}
+
+.loginlogo {
+    width: 150px;
+    height: 150px;
+}
+
+.menulogo {
+    width: 50px;
+    height: 50px;
+}
+
+body, html {
+    height: 100%;
+}
+
+.bg-static {
+    /* The image used */
+    /*background-image: url("/Content/themes/ignitionpoint/login-bg.jpg");*/
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.display-flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.input-group-theme {
+    background: @tz-content-bg;
+    color: @text-color;
+    border: 1px solid @primary !important;
+}
+
+label > i, button > i {
+    margin-right: 6px;
+}
+
+.input-group-btn label > i, .input-group-btn button > i,
+#EmailLockBtn > i, #FitInBoxLockBtn > i {
+    margin-right: 0;
+}
+
+// .tz-welcome.jumbotron h1 {
+    // font-weight: bold;
+    //
+}
+
+// .tz-welcome.jumbotron p {
+    // font-weight: bold;
+    //
+}
+
+.loginscreen h2 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+    .loginscreen h2.login-header {
+        font-weight: bold;
+        font-size: 63px;
+    }
+
+//login screen
+
+// welcome screen
+.tz-welcome-image {
+    padding: 80px 0 40px 0;
+}
+
+.tz-welcome h1 {
+    font-weight: bold;
+    font-size: 73px;
+    padding: 80px 0 40px 0;
+}
+
+.tz-welcome p {
+    font-weight: bold;
+    font-size: 21px;
+    padding: 20px 0 60px 0;
+}
+
+.tz-welcome-icon-boxes a, .tz-welcome-user-manuals a {
+    text-decoration: none !important;
+}
+
+.tz-welcome-icon-boxes {
+    text-align: center;
+}
+
+    .tz-welcome-icon-boxes .ibox-content {
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+
+    .tz-welcome-icon-boxes p {
+        font-size: 21px;
+    }
+
+    .tz-welcome-icon-boxes i {
+        display: block;
+        color: @primary;
+        font-size: 60px;
+        padding: 20px;
+    }
+
+.tz-welcome-user-manuals i {
+    color: @primary;
+    width: 30px;
+    text-align: center;
+}
+
+.tz-welcome-user-manuals {
+    font-size: 18px;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+//welcome screen
+
+
+//Form
+.form-control.in-line {
+    width: auto;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: @tz-content-bg;
+}
+
+.option-button.active {
+    background-color: @primary;
+}
+
+//Form
+
+//kendo grid popup and dropdown
+.k-button:hover, .k-button.k-state-hover, .k-button:focus, .k-button.k-state-focused, .k-textbox:hover, .k-state-hover, .k-state-hover:hover, .k-pager-wrap .k-link:hover, .k-other-month.k-state-hover .k-link, div.k-filebrowser-dropzone em, .k-draghandle:hover, .k-header, .k-grid-header, .k-toolbar, .k-dropdown-wrap, .k-picker-wrap, .k-numeric-wrap, .k-grouping-header, .k-pager-wrap, .k-textbox, .k-button, .k-progressbar, .k-draghandle, .k-autocomplete, .k-state-highlight, .k-tabstrip-items .k-item, .km-pane-wrapper > .km-pane > .km-view > .km-content {
+    background-image: none;
+}
+
+    .k-state-hover, .k-state-hover:hover {
+        background-color: @primary-hover;
+    }
+
+.k-calendar th {
+    background-color: @tz-bg;
+}
+
+
+.k-content, .k-editable-area, .k-panelbar > li.k-item, .k-panel > li.k-item, .k-tiles {
+    background-color: @tz-content-bg;
+}
+
+.k-header, .k-treemap-title, .k-link:link, .k-link:visited, .k-nav-current.k-state-hover .k-link, .k-block, .k-widget, .k-popup, .k-content, .k-toolbar, .k-dropdown .k-input, .k-calendar .k-link.k-nav-fast, .k-input, input.k-textbox, textarea.k-textbox, input.k-textbox:hover, textarea.k-textbox:hover, .k-textbox > input, .k-multiselect-wrap {
+    color: @text-color;
+    background-color: @tz-content-bg;
+}
+
+.k-calendar .k-content .k-link {
+    background-color: transparent;
+}
+
+.k-header {
+    background-color: @tz-bg;
+}
+
+.k-grid-toolbar .k-button > .k-icon,
+.k-grid tbody td > .k-grid-delete > .k-icon {
+    display: none;
+}
+
+.k-calendar .k-link.k-nav-fast.k-state-hover {
+    .btn-primary;
+}
+
+.k-state-focused.k-state-selected, .k-list > .k-state-focused.k-state-selected, .k-listview > .k-state-focused.k-state-selected, td.k-state-focused.k-state-selected {
+    // background: none;
+    box-shadow: none;
+}
+
+.k-grid-toolbar .btn-primary.k-button:hover, .k-grid-toolbar .btn-primary.k-button:active, .k-grid-toolbar .btn-primary.k-button:focus, .k-button:focus:active:not(.k-state-disabled):not([disabled]) {
+    background: none;
+    box-shadow: none;
+    background-color: @primary-alt-hover;
+    color: @primary-text;
+    // @constant-dark;
+    ;
+}
+
+.k-grid tbody td > .k-grid-delete:hover, .k-grid tbody td > .k-grid-delete:active, .k-grid tbody td > .k-grid-delete:focus {
+    background: none;
+    background-color: @error-hover;
+}
+
+.k-animation-container .k-popup {
+    background-color: @surface
+}
+
+    .k-animation-container .k-popup .k-button, .k-animation-container .k-popup .k-button:hover {
+        background: none;
+        color: @normal-text;
+        border: none;
+        .btn-default;
+    }
+
+        .k-animation-container .k-popup .k-button.k-primary {
+            .btn-primary;
+        }
+
+            .k-animation-container .k-popup .k-button.k-primary:hover {
+                background-color: @primary-hover;
+            }
+
+.k-popup .k-autocomplete.k-state-default, .k-popup .k-picker-wrap.k-state-default, .k-popup .k-numeric-wrap.k-state-default, .k-popup .k-dropdown-wrap.k-state-default, .k-widget.k-dropdown, .k-widget .k-dropdown-wrap.k-state-default {
+    background: none;
+    background-color: @surface
+}
+
+.k-animation-container .k-popup .k-list > .k-state-selected, .k-animation-container .k-popup .k-list > .k-state-focused, .k-animation-container .k-popup .k-list > .k-state-hover {
+    background: none;
+    border: none;
+    color: @primary-text;
+    // #fff;
+    background-color: @primary;
+}
+
+// .k-autocomplete, .k-combobox, .k-datepicker, .k-timepicker, .k-datetimepicker, .k-colorpicker, .k-numerictextbox, .k-dropdown, .k-selectbox, .k-textbox, .k-toolbar .k-split-button
+form .tz-ibox-content .k-dropdown, .tz-ibox-content form .k-dropdown {
+    width: 100%;
+}
+
+.k-pager-input > input.k-textbox {
+    text-indent: 0;
+    text-align: center;
+}
+
+.k-state-hover > .k-select,
+.k-state-selected {
+    background: none;
+    // border: none;
+    color: @primary-text;
+    // #fff;
+    background-color: @primary;
+}
+
+
+.k-autocomplete.k-state-focused, .k-picker-wrap.k-state-focused, .k-numeric-wrap.k-state-focused, .k-dropdown-wrap.k-state-focused, .k-multiselect.k-header.k-state-focused {
+    border-color: @primary;
+}
+
+.k-picker-wrap .k-select, .k-numeric-wrap .k-select, .k-dropdown-wrap .k-select {
+    background-color: @primary;
+    color: @primary-text;
+    // #fff;
+}
+
+.k-i-calendar {
+    background-position: -48px -176px;
+    //kendo calendar icon hack
+}
+
+.k-i-clock {
+    background-position: -48px -192px;
+    //kendo calendar icon hack
+}
+
+.k-numeric-wrap .k-link.k-state-selected {
+    background-color: @primary-hover;
+}
+
+.k-datetimepicker .k-picker-wrap .k-icon {
+    color: @primary-text;
+    // #fff;
+}
+
+.k-grid-pager {
+    background-color: @surface;
+}
+
+.k-grid td {
+    border-width: 0;
+    background-color: @surface;
+    border-bottom: 1px solid @tz-table-row-border;
+    line-height: 40px;
+    white-space: nowrap;
+}
+
+.k-grid {
+    border: none; /* Remove border */
+    background-color: @surface;
+}
+
+    .k-grid th {
+        background-color: @surface;
+        border-color: @surface;
+    }
+
+.k-grid-header th.k-header, .k-filter-row th {
+    font-weight: bolder;
+    font-size: @table-header-font-size;
+    border-bottom: 4px solid @tz-table-row-border;
+}
+
+    .k-grid-header th.k-header > .k-link {
+        overflow: visible;
+    }
+
+.k-state-focused {
+    background-color: @primary;
+    box-shadow: none !important;
+}
+
+.k-filter-help-text + label {
+    margin-right: 20px; /* kendo grid filter's of radio button */
+}
+
+.k-filter-menu {
+    font-weight: normal !important;
+}
+
+.k-picker-wrap.k-state-focused {
+    border-color: @yellow;
+}
+
+.k-numeric-wrap.k-state-focused {
+    border-color: @yellow;
+}
+
+.k-grid-pager.k-item.k-state-default.k-last {
+    background-color: @surface;
+    border: none
+}
+
+.k-item.k-state-default.k-first {
+    background-color: @surface;
+    border: none
+}
+
+.k-state-active, .k-state-active:hover, .k-active-filter, .k-tabstrip .k-state-active {
+    border: none
+}
+
+.k-loading.k-complete {
+    border: none
+}
+
+.k-item.k-state-default {
+    background-color: none
+}
+
+// Apply normal font weight to all kendo grid headers and reports tables
+.k-grid-header th.k-header {
+    font-weight: normal;
+}
+
+#reportDataTable,
+#reportDataTableEventSummary,
+#reportDataTableAgentSummary,
+#reportDataTableElapsedTimeSummary,
+#reportDataTableAvailable,
+#reportDataTableExpired,
+#reportDataTableOccupied {
+    thead > tr > th
+
+{
+    font-weight: normal !important;
+}
+
+}
+
+.popover-title {
+    padding: 8px 14px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    background-color: @primary;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+}
+
+.larger-icon {
+    padding-right: 30px;
+    padding-top: 10px;
+    font-size: 35px;
+    color: @primary;
+}
+
+//hack on kendo calendar icons
+.k-datetimepicker .k-select i {
+    padding: 9px 4px;
+}
+
+//hack on kendo grid sorting icons
+.k-header span.k-i-arrow-n, .k-header span.k-i-arrow-s {
+    padding-left: 5px;
+}
+
+//start hack on kendo grid Editable Column
+div.k-grid-header, .k-grid-header, .k-grid-header-wrap {
+    border-color: @tz-table-row-border;
+}
+
+.k-grid-toolbar:first-child {
+    border: 0;
+}
+
+div.k-grid-header {
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+//this one is for when there already has a kendo header's button, like in Student's Index page
+.k-grid-top .btn .caret {
+    margin-left: 0.5em;
+}
+
+//end hack on kendo grid Editable Column
+
+//start locker layout related
+
+.locker-layout-info {
+    background-color: @tz-bg;
+}
+
+.locker-info {
+    border: 2px solid @tz-bg;
+}
+
+.locker-text {
+    color: @text-color;
+}
+
+.days-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: @tz-bg;
+    border-top-right-radius: 20px;
+    /*padding-bottom:125px;*/
+}
+
+.status-color {
+    color: @text-color;
+}
+
+.search-dropdown,
+.alllocker-drop-down {
+    color: @text-color !important;
+    background: @tz-bg;
+}
+
+#btn-layout-dropoff-id, #btn-layout-recover-id {
+    background-color: @tz-content-bg !important;
+    color: @primary-text !important;
+    border: 0 !important;
+    padding: 2px 10px !important;
+}
+
+#btn-layout-dropoff-id {
+    border-right: solid 2px #fff !important;
+    border-radius: 0;
+}
+
+    #btn-layout-dropoff-id.disabled, #btn-layout-dropoff-id[disabled], #btn-layout-recover-id.disabled, #btn-layout-recover-id[disabled] {
+        display: none;
+    }
+
+    #btn-layout-dropoff-id:focus, #btn-layout-dropoff-id:hover, #btn-layout-recover-id:focus, #btn-layout-recover-id:hover {
+        box-shadow: none;
+        font-weight: bold;
+    }
+
+
+.layout-button-vertical-separator {
+    display: inline-block;
+    border-left: 2px solid #fff;
+    height: 20px;
+    margin: 0;
+    padding: 2px 0;
+}
+
+.parcel-Count {
+    color: @text-color;
+}
+
+.agent-drop-down {
+    background-color: @tz-bg;
+}
+
+//end locker layout related
+
+
+// start locker layout custom scroll bar
+.tz-scroll-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background-color: @primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.left-scroll-bar {
+    left: 0;
+}
+
+.right-scroll-bar {
+    right: 0;
+}
+
+.tz-scroll-bar i {
+    font-size: 20px;
+    color: @text-color;
+}
+
+// end locker layout custom scroll bar
+
+// kiosk settings
+.flex-align {
+    display: flex;
+}
+
+.label-width {
+    flex: 1 1 50%;
+    min-width: 150px;
+    word-wrap: break-word;
+    min-height: 38px;
+    align-content: center;
+    white-space: normal;
+    color: @text-color !important;
+}
+
+.input-width {
+    flex: 1 1 50%;
+    min-width: 200px;
+    min-height: 38px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.custom-label-width {
+    min-width: 350px;
+}
+
+.max-width {
+    max-width: 1000px !important;
+}
+
+.k-pager-wrap {
+    border-color: @tz-bg;
+}
+
+    .k-pager-wrap > .k-link {
+        border-style: solid;
+        border-width: 0px;
+    }
+
+    .k-pager-wrap .k-state-selected {
+        background-color: @primary;
+        border-width: 0px;
+    }
+
+    .k-pager-wrap .k-link:hover, .k-pager-wrap .k-link:focus {
+        background-color: @primary-hover;
+        border-width: 0px;
+        color: @primary-text;
+        // #fff;
+        outline: none;
+    }
+
+.k-pager-numbers .k-link {
+    border-width: 0px;
+}
+
+.k-grouping-row td, .k-group-footer td, .k-grid-footer td {
+    color: @text-color;
+}
+
+.k-tabstrip-items .k-tab-on-top, .k-tabstrip-items .k-state-active, .k-panelbar .k-tabstrip-items .k-state-active {
+    padding-bottom: 0px;
+}
+
+// .k-grid-pager .k-icon.k-i-seek-w {
+    // background: none;
+    //
+}
+
+
+span.k-datepicker, span.k-timepicker, span.k-datetimepicker, span.k-colorpicker, span.k-numerictextbox, span.k-combobox, span.k-dropdown, .k-toolbar .k-split-button {
+    width: 100%;
+}
+
+.k-dropdown .k-state-hover .k-input, .k-dropdown .k-state-focused .k-input {
+    color: @text-color;
+}
+
+.k-grid-filter.k-state-active {
+    background-color: @primary;
+}
+
+//kendo grid popup and dropdown
+
+select:focus > option:checked, select:focus > option:hover {
+    background: @primary !important;
+}
+
+.vertical-align-middle {
+    vertical-align: middle !important;
+}
+
+/*----- Start TZ Layout style -----*/
+
+.tz-tab-content.tab-content, .tabs-container .tz-tab-content .panel-body {
+    background-color: @tz-content-bg;
+    // background-color: @content-highlight-bg;
+}
+
+.tabs-container .panel-body {
+    border: 0;
+}
+
+input[type="checkbox"], input[type='radio'] {
+    accent-color: @primary;
+}
+
+.form-group input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+
+.tz-ibox-content.ibox-content.locker-layout-content {
+    background: @tz-content-bg;
+    border-width: 0 0;
+}
+
+.tz-ibox-content.ibox-content.locker-layout-table {
+    background: @tz-content-bg;
+    border-width: 0 0;
+    border-radius: 0px 0px 0px 20px;
+}
+
+.form-control-dateContainer .k-datepicker {
+    width: 100%;
+}
+
+.modal-body-wrap {
+    overflow-wrap: break-word;
+}
+
+.legend {
+    color: @text-color;
+}
+
+.option-button {
+    background-color: @tz-bg;
+}
+
+.selectedlocker {
+    color: @text-color !important;
+}
+
+.custom-chart {
+    border-radius: 20px;
+    color: @text-color;
+    background-color: @tz-content-bg;
+    // @constant-light;
+    padding: 0px 0px;
+    // font-size: 12pt;
+    font-weight: bold;
+    overflow-x: hidden;
+}
+
+.custom-chart-label {
+    border-radius: 30px;
+    color: @text-color;
+    background-color: @tz-content-bg;
+    // @constant-light;
+    padding: 0px 0px;
+    // font-size: 12pt;
+    font-weight: bold;
+    border: 15px solid @tz-bg;
+    overflow-x: hidden
+}
+
+.custom-chart .k-pager-wrap {
+    font-weight: normal;
+}
+
+.custom-chart .module-caption h2 {
+    font-size: 24px;
+}
+
+.custom-rounded {
+    border-radius: 20px;
+    overflow-x: auto;
+}
+
+.custom-overflow-x {
+    overflow-x: auto;
+}
+
+.kiosk-selector[multiple] option {
+    color: @text-color !important;
+}
+
+// This keyframes spin is common for both custom-spinner and .k-loading-image
+@keyframes spin {
+    0%
+
+{
+    transform: rotate(0deg);
+}
+
+100% {
+    transform: rotate(360deg);
+}
+
+}
+
+// start custom-spinner
+// Custom spinner style used for the transaction report loading indicator:
+// 1.Animation needs to be changed
+// 2.To disable set 'display:none;'
+.custom-spinner.light-theme {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url(..\Images\light_loading_indicator.gif);
+    background-position: center;
+    background-size: contain;
+    z-index: 9999;
+}
+
+.custom-spinner.dark-theme {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url(..\Images\dark_loading_indicator.gif);
+    background-position: center;
+    background-size: contain;
+    z-index: 9999;
+}
+
+// end spinner
+
+// start kendo grid spinner
+// This one used for Kendo grid loading indicator new style
+/*.k-loading-image {
+    border: 4px solid @text-color;
+    border-top: 4px solid @navy;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-left: 800px;
+    animation: spin 1s linear infinite;
+}*/
+.k-loading-image {
+    width: 40px;
+    height: 40px;
+    // border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-image: url(..\Images\light_loading_indicator.gif);
+    background-position: center;
+    background-size: contain;
+}
+
+.dark-theme .k-loading-image {
+    background-image: url(..\Images\dark_loading_indicator.gif) !important;
+}
+
+/*.k-loading-image.dark_theme {
+    background-position: center !important;
+    background-image: url(..\Images\dark_loading_indicator.gif);
+    background-repeat: no-repeat !important;
+}*/
+.k-loading-color {
+    background-color: @tz-content-bg;
+    opacity: .1;
+}
+
+.k-loading-mask, .k-loading-image {
+    display: none;
+}
+
+#kioskUtilization .k-header.k-grid-toolbar.k-grid-top {
+    border: none !important;
+}
+
+// close button
+.closebtn {
+    color: @text-color;
+    border-color: transparent;
+    background-color: transparent;
+    font-size: 35px;
+    position: absolute;
+    top: 2px;
+    right: 7px;
+    cursor: pointer;
+}
+
+// AD Authentication Settings close button
+.closebtn-panel {
+    color: @text-color;
+    border-color: transparent;
+    background-color: transparent;
+    font-size: 22px;
+    float: right;
+    cursor: pointer;
+    line-height: 0;
+}
+
+.status-bg {
+    background-color: @navy;
+    color: @text-color !important;
+}
+
+#delegateGrid .k-icon.k-update,
+#delegateGrid .k-icon.k-cancel,
+#delegateGrid .k-icon.k-edit {
+    display: none;
+}
+
+#delegateGrid .k-button.k-button-icontext.k-grid-update,
+#delegateGrid .k-button.k-button-icontext.k-grid-cancel,
+#delegateGrid .k-button.k-button-icontext.k-grid-edit,
+#delegateGrid .k-button.k-button-icontext.k-grid-delete {
+    width: 45%;
+}
+
+    #delegateGrid .k-button.k-button-icontext.k-grid-add:hover,
+    #delegateGrid .k-button.k-button-icontext.k-grid-update:active,
+    #delegateGrid .k-button.k-button-icontext.k-grid-cancel:active,
+    #delegateGrid .k-button.k-button-icontext.k-grid-delete:hover {
+        background: @primary-hover;
+    }
+
+#delegateGrid .k-button.k-button-icontext.k-grid-delete {
+    background-color: @primary;
+}
+
+//end spinner
+
+// DatePicker
+.datepicker {
+    background-color: @tz-content-bg !important;
+    color: @text-color !important;
+}
+
+.datepicker--cell:hover,
+.datepicker--cell.-selected-,
+.datepicker--nav-action:hover,
+.datepicker--cell.-current-:hover,
+.datepicker--nav-title:hover,
+.datepicker--button:hover {
+    background: @primary-hover !important;
+}
+
+.datepicker--nav-title i,
+.datepicker--nav-action path {
+    stroke: @text-color !important;
+    color: @text-color !important;
+}
+
+.datepicker--cell.-current-,
+.datepicker--button {
+    background: @primary !important;
+    color: @text-color !important;
+}
+
+    .datepicker--day-name,
+    .datepicker--cell.-selected-,
+    .datepicker--cell.-current-:hover,
+    .datepicker--button:hover {
+        color: @text-color !important;
+    }
+
+.datepicker--nav {
+    border: 0px solid !important;
+}
+
+.datepicker--content {
+    padding: 0px !important;
+}
+
+.datepicker--days-names {
+    margin-top: 0px !important;
+}
+
+.datepicker--nav-title {
+    padding: 0px 10px 0px 10px !important;
+}
+
+.datepicker--day-name {
+    padding-bottom: 6px !important;
+    background-color: @tz-bg !important;
+    border-bottom: 1px solid #d7d7d7 !important;
+    border-top: 10px solid @tz-bg !important;
+}
+
+.selector-listbox {
+    background-color: @tz-bg;
+}
+
+
+.custom-color {
+    background-color: @surface;
+}
+
+.k-header.k-grid-toolbar.k-grid-top {
+    background-color: @surface;
+}
+
+.checkbox-content {
+    font-weight: inherit;
+}
+
+.button-foreground {
+    color: @primary-text;
+    // @constant-dark;
+}
+
+.label-align {
+    width: 15%;
+}
+
+input[type="checkbox"] {
+    accent-color: @primary;
+}
+
+
+
+.label-fontweight {
+    font-weight: normal;
+}
+
+.customise-kgrid {
+    border: 1px solid @tz-table-row-border;
+}
+
+.panel-background {
+    background-color: @tz-bg;
+}
+
+.label-fontsize {
+    font-size: 13px;
+}
+
+// .k-button:hover {
+    // color: @normal-text;
+    // background-color: @primary;
+    // border-color: @primary;
+    //
+}
+
+// .k-button {
+    // color: @normal-text;
+    // background-color: @primary // border-color: @primary;
+    //
+}
+
+
+.customise-kgrid input {
+    height: 30px;
+}
+
+// modal
+.modal-content {
+    .default-rounded-corners;
+}
+
+.modal h1, .modal h2, .modal h3, .modal h4, .modal h5, .modal h6 {
+    color: @text-color;
+}
+
+.modal p {
+    font-size: 16px;
+}
+
+.modal-header {
+    background-color: @primary;
+    border: none;
+    .upper-default-rounded-corners;
+    padding-left: 30px;
+    //make it same as the modal body
+}
+
+    .modal-header h1, .modal-header h2, .modal-header h3, .modal-header h4, .modal-header h5, .modal-header h6 {
+        color: @primary-text;
+        margin: 10px 0;
+    }
+
+.inmodal .modal-body {
+    background-color: @tz-content-bg;
+}
+
+.modal-footer {
+    background: none;
+    background-color: @tz-content-bg;
+    border-top: 0;
+    .lower-default-rounded-corners;
+}
+
+.modal-content {
+    border-radius: 0;
+    border: none;
+    background-color: @tz-content-bg;
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 800px;
+        margin: 30px auto;
+    }
+}
+
+// .long-modal-confirmation .k-header {
+    // height: 350px;
+    //
+}
+
+.error-textspace {
+    line-height: 25px; /* Adjust the value as needed */
+}
+
+.errormiddle-box h1 {
+    font-size: 80px;
+    padding-top: 235px !important;
+}
+
+
+// .welcome-title {
+    // padding : 5px 0px 0px 30px;
+    //
+}
+
+
+// special control
+input#btnAddPackage {
+    border-right: 2px solid #4D3800;
+}
+
+.EmailTemplates .k-state-active .btn-default {
+    .btn-primary;
+}
+
+.email-template .ibox-content {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.email-template a.list-group-item {
+    color: @text-color;
+    background-color: @tz-content-bg;
+}
+
+    .email-template a.list-group-item.active, .email-template a.list-group-item.active:hover, .email-template a.list-group-item.active:focus {
+        color: @primary-text;
+        font-weight: bold;
+    }
+
+.email-template .list-group-item, .email-template .list-group-item.active, .email-template .list-group-item.active:hover, .email-template .list-group-item.active:focus {
+    border: none;
+}
+
+.email-template .email-preview-container hr {
+    border-color: @text-color !important;
+}
+
+.email-template .email-templates-list-container {
+    background-color: @tz-content-bg !important;
+}
+
+#email-template-panel.k-panelbar > li.k-state-default > .k-link {
+    color: @text-color !important;
+}
+
+#email-template-panel .k-state-selected:link,
+#email-template-panel .k-state-hover,
+#email-template-panel .k-panelbar {
+    background-color: @primary;
+}
+
+//this one are hardcoded in each email templates
+iframe body.sansserif > p, iframe body.sansserif > table {
+    color: @text-color;
+}
+
+.form-control, .single-line {
+    // background-color: @tz-content-bg;
+    // @site-background;
+    background-color: @site-background;
+    font-size: 14px;
+}
+
+.form-group .k-widget {
+    font-size: 14px;
+}
+
+
+.tz-theme-settings-colors input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    width: 80px;
+    height: 60px;
+    padding: unset;
+}
+
+    .tz-theme-settings-colors input[type="color"]::-webkit-color-swatch-wrapper {
+        padding: 0 0 0 0;
+    }
+
+    .tz-theme-settings-colors input[type="color"]::-webkit-color-swatch {
+        border: none;
+        .rounded-corners(10px);
+    }
+
+.tz-theme-settings-colors input[type="color"] {
+    background-color: @tz-content-bg;
+    //@tz-bg;
+}
+
+.theme-file-image-element {
+    padding-left: 15px;
+    margin: 15px auto;
+}
+
+.theme-color-element {
+    // background-color: @tz-bg;
+    //removed from new design // padding: 5px 0;
+    .rounded-corners(10px);
+    padding: 15px 15px 15px 15px;
+}
+
+    .theme-color-element > .pull-left {
+        margin-right: 10px;
+    }
+
+//This is the main theme color, it has a differnt style then others
+.theme-color-element.custom-theme-main-setting {
+    padding: 10px 15px 15px 25px;
+}
+
+.theme-color-desc {
+    overflow: hidden;
+    font-size: 12px;
+    float: left;
+    //new design
+}
+
+.theme-file-image-preview-wrapper.pull-left {
+    margin-right: 30px;
+}
+
+.theme-file-image-preview-wrapper {
+    // width: 80px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+    .theme-file-image-preview-wrapper img {
+        max-height: 100px;
+        width: auto; /* Maintain aspect ratio */
+    }
+
+// input[type="file"].theme-file-image-upload {
+    // display: none;
+    //
+}
+
+// .theme-file-upload-cover {
+    // border: 1px solid #ccc;
+    // display: inline-block;
+    // padding: 6px 12px;
+    // cursor: pointer;
+    //
+}
+
+.tz-file-image-file-upload-control {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 18px;
+    top: 10px;
+    // padding: 10px 20px;
+    // border-radius: 5px;
+    // background-color: #eee;
+}
+
+.tz-file-image-input {
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.tz-file-image-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+    .tz-file-image-label i {
+        margin-right: 10px;
+    }
+
+.tz-file-text-wrapper {
+}
+
+
+
+
+
+
+
+
+
+
+
+.tz-theme-select-container {
+    position: relative;
+    padding-left: 15px;
+}
+
+.tz-theme-select-label {
+    background-color: @tz-bg;
+    // #007bff;
+    color: @text-color;
+    // white;
+    padding: 5px 10px 0px 40px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    position: relative;
+    display: block;
+    z-index: 1;
+    margin: 0;
+    font-size: 10px;
+    font-weight: 400;
+    top: 8px;
+}
+
+.tz-theme-select-wrapper {
+    position: relative;
+}
+
+.tz-theme-select {
+    width: 100%;
+    padding: 10px 40px 15px 40px;
+    border-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid @tz-bg;
+    // #007bff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: @tz-bg;
+    // white;
+    color: @text-color;
+    //#007bff;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+    .tz-theme-select option {
+        zoom: 1.3;
+    }
+
+.tz-theme-select-icon-left, .tz-theme-select-icon-right {
+    position: absolute;
+    top: 36%;
+    //50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: @text-color;
+    //#007bff;
+    font-size: 20px;
+}
+
+.tz-theme-select-icon-left {
+    left: 10px;
+}
+
+.tz-theme-select-icon-right {
+    right: 10px;
+}
+
+
+
+
+
+
+
+// Start Kiosk Preview in Theme
+
+.kiosk-preview-container-wrapper {
+    background-color: @tz-bg;
+    // padding: 5px 0;
+    .rounded-corners(10px);
+    padding: 25px;
+    margin-top: 7px;
+}
+
+.kiosk-preview-container-outer {
+    border: 10px solid #000000;
+    .rounded-corners(10px);
+    // padding: 25px;
+    // margin-top: 10px;
+}
+
+.kiosk-preview-container {
+    // max-width: 600px;
+    //let's see if we need this? or use it in a smaller screen height: 400px;
+    // margin: 0 auto;
+    // margin: 10px auto;
+    //To move it down display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #ddd;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+//kiosk preview header
+.kiosk-preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.kiosk-preview-header img {
+    height: 50px;
+}
+
+
+
+//kiosk preview content
+
+
+.kiosk-preview-content h2 {
+    text-align: center;
+}
+
+.kiosk-preview-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin: 40px 80px;
+}
+
+.kiosk-preview-btn-wrapper {
+    text-align: center;
+}
+
+.kiosk-preview-btn {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // border: 1px solid #E7E7E7;
+    box-shadow: 0 0 8px #000000;
+    margin-bottom: 10px; /* Space between button and text */
+}
+
+    .kiosk-preview-btn i {
+        font-size: 48px;
+    }
+
+.kiosk-preview-btn-text {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    ;
+}
+
+
+
+//kiosk preview footer
+
+.kiosk-preview-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    //same as kiosk-preview-header img as this is the header height font-size: 20px;
+}
+
+.kiosk-preview-footer .fa, .kiosk-preview-footer span {
+    margin-left: 5px;
+}
+
+
+
+// End Kiosk Preview in Theme
+
+
+//hack on bootstrap table
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    border-top: 1px solid @tz-table-row-border;
+}
+
+// Start datatables fix
+div.dt-buttons div.dt-button-collection {
+    background-color: @tz-bg !important;
+}
+
+table.table.dataTable thead tr {
+    font-size: @table-header-font-size;
+}
+
+#locker-availability-table.table > thead > tr > th,
+#locker-availability-table.table-striped > tbody > tr:nth-child(odd) > td {
+    background-color: @tz-bg !important;
+    border: 1px solid @primary !important;
+}
+
+#locker-availability-table.table > tbody > tr > td {
+    border: 1px solid @primary !important;
+    background: @tz-content-bg !important;
+}
+
+.table.dataTable > thead > tr > th,
+.table.dataTable > tbody > tr > td {
+    border-bottom: 1px solid @tz-table-row-border !important;
+    border-top: 0px solid @tz-table-row-border !important;
+    line-height: 20px;
+    // 40px or our normal grid
+}
+
+.tz-ibox-content .pagination > .active > a, .tz-ibox-content .pagination > .active > span, .tz-ibox-content .pagination > .active > a:hover, .tz-ibox-content .pagination > .active > span:hover, .tz-ibox-content .pagination > .active > a:focus, .tz-ibox-content .pagination > .active > span:focus {
+    background-color: @primary;
+    border-color: #DDDDDD;
+    .rounded-corners;
+}
+
+.tz-ibox-content .pagination > li > a, .tz-ibox-content .pagination > li > span {
+    background-color: @tz-content-bg;
+    border: none;
+}
+
+// table.table.dataTable {
+    // table-layout: fixed;
+    //
+}
+
+// Change this to limit the heigh and scroll
+.dt-layout-full {
+    height: 750px;
+    overflow-y: scroll;
+}
+
+.dt-buttons .btn-default:hover,
+.dt-buttons .btn-default:focus,
+.dt-buttons .btn-default:active,
+.dt-buttons .btn-default.active,
+.dt-buttons .open .dropdown-toggle.btn-default,
+.dt-buttons .btn-default:active:focus,
+.dt-buttons .btn-default:active:hover,
+.dt-buttons .btn-default.active:hover,
+.dt-buttons .btn-default.active:focus
+.dt-buttons .buttons-colvis[aria-expanded="true"] {
+    background-color: @primary;
+}
+
+.dt-button-collection .dropdown-menu > li > a:hover, .dt-button-collection .dropdown-menu > li > a:focus {
+    background-color: @primary;
+    color: @primary-text;
+}
+
+//datatable hack
+table.dataTable tr.dtrg-group th.dt-type-numeric {
+    text-align: right;
+}
+
+th.dt-type-numeric:not(.dt-orderable-asc):not(.dt-orderable-desc), td.dt-type-numeric {
+    padding-right: 15px !important;
+}
+
+.custom-report-wrapper {
+    overflow-x: auto;
+}
+
+//hacking on the alignment of sorting icons of datatable, I think original style is fine, hope this not breaks anything
+table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order, table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order, table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order, table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order, table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order, table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order {
+    top: 19px !important;
+    bottom: auto !important;
+}
+
+.dt-layout-row select.input-sm {
+    height: auto;
+}
+
+.dropdown-menu > li > a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+    div.dt-buttons {
+        width: auto !important;
+    }
+}
+
+// End datatables fix
+
+
+
+
+
+
+//Start Font Awesome override of icons for kendo
+
+//End Font Awesome override of icons for kendo
+
+.form-group input[type="checkbox"] {
+    margin-left: 4px;
+}

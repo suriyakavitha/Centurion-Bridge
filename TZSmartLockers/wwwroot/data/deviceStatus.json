@@ -1,0 +1,35 @@
+[
+  {
+    "PrimaryName": "Row1 Cab1 Front",
+    "SecondaryName": "05050505606",
+    "LockStatus": "Locked",
+    "Timeout": "30 sec",
+    "DoorStatus": "Closed",
+    "Input1": "",
+    "Input2": "Closed",
+    "Output1": "",
+    "Output2": ""
+  },
+  {
+    "PrimaryName": "Row1 Cab1 Rear",
+    "SecondaryName": "05050505BSB",
+    "LockStatus": "Unlocked",
+    "Timeout": "30 sec",
+    "DoorStatus": "Open",
+    "Input1": "25.4 C",
+    "Input2": "Open",
+    "Output1": "",
+    "Output2": ""
+  },
+  {
+    "PrimaryName": "Row1 Cab1 Front",
+    "SecondaryName": "05050505B90",
+    "LockStatus": "Error",
+    "Timeout": "30 sec",
+    "DoorStatus": "Error",
+    "Input1": "",
+    "Input2": "Open",
+    "Output1": "",
+    "Output2": ""
+  }
+]

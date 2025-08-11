@@ -1,0 +1,170 @@
+﻿body {
+    background-color: #f3f3f3;
+    font-family: 'Segoe UI', sans-serif;
+}
+.page-title {
+    padding-top:0px;
+    padding-bottom:10px;
+    font-size: 3rem;
+    color: #000;
+    padding-left: 0;
+}
+
+.sidebar {
+    width: 300px; 
+    background-color: #fff;
+    height: auto; 
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    padding: 20px 10px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+}
+.sidebar {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+}
+
+    .sidebar .logo img {
+        width: 70px; 
+    }
+
+    .sidebar .nav-link {
+        display: flex;
+        align-items: center;
+        padding: 12px 20px;
+        color: #000;
+        font-weight: 500;
+        margin-bottom: 5px;
+        border-radius: 8px;
+    }
+
+        .sidebar .nav-link.active,
+        .sidebar .nav-link:hover {
+            background-color: #ffcc00;
+        }
+
+        .sidebar .nav-link i {
+            margin-right: 10px;
+        }
+
+.main-content {
+    margin-left: 305px;
+    padding: 5px;
+    width: calc(100% - 280px);
+}
+.device-table {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+    .device-table th {
+        border-bottom: 2px solid #eee;
+    }
+
+.locked {
+    color: #dc3545; 
+}
+
+.unlocked {
+    color: #28a745; 
+}
+
+.error {
+    color: #ffc107; 
+}
+
+.status-icon {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+.table th,
+.table td {
+    border: none;
+    padding: 10px 10px;
+    vertical-align: middle;
+}
+
+.table thead th {
+    border-bottom: 1px solid #ccc;
+    font-weight: 600;
+    padding-top: 80px !important;
+    padding-bottom: 12px !important;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+
+    .table tbody tr:last-child {
+        border-bottom: none;
+    }
+
+.lock-rotate-down {
+    transform: rotate(180deg);
+    display: inline-block;
+}
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    position: relative;
+}
+
+.pagination-controls {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+    .pagination-controls button {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+        .pagination-controls button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+.pagination-counter {
+    margin-left: auto;
+}
+
+.circular-symbol {
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    background-color: white;
+    border-radius: 100%;
+    padding: 8px;
+    text-align: center;
+    width: 10px;
+    height: 10px;
+    line-height: 9px;
+    border: none;
+}

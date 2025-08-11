@@ -1,0 +1,77 @@
+﻿
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center; 
+    padding: 20px 80px; 
+    background: url('/images/bg-login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+}
+.logo-img {
+    width: 100px;
+    height: 95px;
+}
+.logo-container {
+    padding-top: 25px;
+    padding-bottom: 70px;
+}
+.logo-text h4 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: #4e4848;
+    text-align:left;
+}
+.login-box {
+    background-color: transparent;
+    backdrop-filter: none;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    color: #000;
+}
+
+    .login-box .form-control {
+        margin-bottom: 15px;
+    }
+
+.login-btn {
+    background-color: #f1c40f;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    border: none;
+}
+
+    .login-btn:hover,
+    .login-btn:active,
+    .login-btn:focus
+    .login-btn:visited {
+        background-color: #f1c40f !important;
+        color: #000 !important;
+        box-shadow: none;
+        outline: none;
+    }
+
+
+.change-password {
+    margin-top: 30px;
+    display: block; 
+    text-align: left; 
+    color: #000;
+    font-size: 14px;
+}
+.login-error {
+    background-color: #ff4d4d;
+    color: #000;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    margin-top: 15px;
+    text-align: left;
+}
