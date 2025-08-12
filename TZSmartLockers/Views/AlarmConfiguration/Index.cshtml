@@ -1,27 +1,42 @@
 ﻿@{
-    ViewData["Title"] = "Alerm Configuration";
+    ViewData["Title"] = "Alarm Configuration";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container-fluid">
-    <h1 class="fw-bold page-title">Alerm Configuration</h1>
 
-    <div class="card shadow-lg" style="border-radius: 12px; background: white;">
+<div class="container-fluid">
+    <!-- Page Title -->
+    <h1 class="fw-bold mb-3" style="font-size: 2rem; padding-bottom:10px; padding-top:10px">Alarm Configuration</h1>
+
+    <!-- Card Container -->
+    <div class="card shadow-sm" style="border-radius: 12px; padding: 0; overflow: hidden;">
         <div class="table-responsive">
-            <table class="table align-middle device-status-table">
-                <thead>
+            <table class="table align-middle mb-0" style="margin: 0; font-size: 14px;">
+                <thead style="background-color: #f9f9f9; font-weight: bold; text-align: center; line-height: 1.2;">
                     <tr>
-                        <th>Title</th>
-                        <th>Source</th>
-                        <th>Current reading</th>
-                        <th>Trigger</th>
-                        <th>Reset</th>
-                        <th>Trigger</th>
-                        <th>Reset</th>
-                        <th>Action</th>
-                        
+                        <th rowspan="2" style="padding: 6px; vertical-align: bottom;">Title</th>
+                        <th rowspan="2" style="padding: 6px; vertical-align: bottom;">Source</th>
+                        <th rowspan="2" style="padding: 6px; vertical-align: bottom;">Current Reading</th>
+                        <th colspan="2" style="padding: 4px; vertical-align: middle;">Minimum</th>
+                        <th colspan="2" style="padding: 4px; vertical-align: middle;">Maximum</th>
+                        <th rowspan="2" style="padding: 6px; vertical-align: bottom;">Action</th>
+                    </tr>
+                    <tr>
+                        <th style="padding: 6px; padding-top:20;">Trigger</th>
+                        <th style="padding: 6px;">Reset</th>
+                        <th style="padding: 6px;">Trigger</th>
+                        <th style="padding: 6px;">Reset</th>
                     </tr>
                 </thead>
-                <tbody id="deviceTableBody">
+
+                <tbody>
+                    <tr>
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                    </tr>
                 </tbody>
             </table>
         </div>
