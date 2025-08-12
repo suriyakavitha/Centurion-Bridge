@@ -81,76 +81,78 @@
 }
 
 <div class="modal fade" id="createLoginModal" tabindex="-1" aria-labelledby="createLoginLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" style="max-width: 70rem; margin: auto;">
-        <div class="modal-content" style="height: 25rem; border-radius:12px">
+    <div class="modal-dialog modal-dialog-centered modal-xl" style="max-width: 60rem; margin: auto;">
+        <div class="modal-content" style="border-radius: 12px;">
 
-            <!-- Header with background color -->
-            <div class="modal-header" style="background-color: #ffc107; color: white;border-radius:12px">
-                <h5 class="modal-title fw-bold text-black" id="createLoginLabel">Create Login</h5>                
+            <!-- Header -->
+            <div class="modal-header" style="background-color: #ffc107; color: black; border-top-left-radius: 12px; border-top-right-radius: 12px; padding: 12px 20px;">
+                <h5 class="modal-title fw-bold" id="createLoginLabel">Create Login</h5>
             </div>
 
-            <div class="modal-body" style="overflow-y: auto;">
+            <!-- Body -->
+            <div class="modal-body" style="padding: 20px 30px;">
                 <div class="row">
-                    <!-- Column 1: User Information -->
-                    <div class="col-md-6 border-end" style="padding-right: 40px;">
+                    <!-- User Information -->
+                    <div class="col-md-5 border-end" style="padding-right: 25px;">
                         <h6 class="fw-bold mb-3">User Information</h6>
                         <div class="mb-2 d-flex align-items-center">
-                            <label class="me-2" style="width: 200px;">Login Name</label>
+                            <label style="width: 200px; font-weight: 500;">Login Name <span style="color: red;">*</span></label>
                             <input type="text" class="form-control form-control-sm">
                         </div>
                         <div class="mb-2 d-flex align-items-center">
-                            <label class="me-2" style="width: 200px;">Password</label>
+                            <label style="width: 200px; font-weight: 500;">Password <span style="color: red;">*</span></label>
                             <input type="password" class="form-control form-control-sm">
                         </div>
                         <div class="mb-2 d-flex align-items-center">
-                            <label class="me-2" style="width: 200px;">Confirm Password</label>
+                            <label style="width: 200px; font-weight: 500;">Confirm Password <span style="color: red;">*</span></label>
                             <input type="password" class="form-control form-control-sm">
                         </div>
                         <div class="mb-2 d-flex align-items-center">
-                            <label class="me-2" style="width: 200px;">Full Name</label>
+                            <label style="width: 200px; font-weight: 500;">Full Name <span style="color: red;">*</span></label>
                             <input type="text" class="form-control form-control-sm">
                         </div>
                     </div>
 
-                    <!-- Column 2: Permissions -->
-                    <div class="col-md-3 border-end">
+                    <!-- Permissions -->
+                    <div class="col-md-3 border-end" style="padding-left: 20px; padding-right: 20px;">
                         <h6 class="fw-bold mb-3">Permissions</h6>
                         <div class="form-check mb-2">
                             <input class="custom-checkbox" type="checkbox" id="permDevices">
-                            <label class="form-check-label" for="permDevices">Devices</label>
+                            <label for="permDevices">Devices</label>
                         </div>
                         <div class="form-check mb-2">
                             <input class="custom-checkbox" type="checkbox" id="permSystem">
-                            <label class="form-check-label" for="permSystem">System</label>
+                            <label for="permSystem">System</label>
                         </div>
                         <div class="form-check mb-2">
                             <input class="custom-checkbox" type="checkbox" id="permAlarm">
-                            <label class="form-check-label" for="permAlarm">Alarm Configuration</label>
+                            <label for="permAlarm">Alarm Configuration</label>
                         </div>
                     </div>
 
-                    <!-- Column 3: Associated Devices -->
-                    <div class="col-md-3" style="padding-right: 10px;">
+                    <!-- Associated Devices -->
+                    <div class="col-md-4" style="padding-left: 20px;">
                         <h6 class="fw-bold mb-3">Associated Devices</h6>
                         <div class="form-check mb-2">
                             <input class="custom-checkbox" type="checkbox" id="assocDevices">
-                            <label class="form-check-label" for="assocDevices">Associated Devices</label>
+                            <label for="assocDevices">Associated Devices</label>
                         </div>
                         <div class="form-check mb-2">
                             <input class="custom-checkbox" type="checkbox" id="row1Cab1Rear">
-                            <label class="form-check-label" for="row1Cab1Rear">Row1 Cab1 Rear</label>
+                            <label for="row1Cab1Rear">Row1 Cab1 Rear</label>
                         </div>
                         <div class="form-check mb-2">
                             <input class="custom-checkbox" type="checkbox" id="row1Cab2Front">
-                            <label class="form-check-label" for="row1Cab2Front">Row1 Cab2 Front</label>
+                            <label for="row1Cab2Front">Row1 Cab2 Front</label>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="modal-footer justify-content-center">
-                <button type="button" class="btn fw-bold px-4" style="background-color: #ffc107; color: black;">Save</button>
-                <button type="button" class="btn fw-bold px-4" style="background-color: #ffc107; color: black;" data-bs-dismiss="modal">Cancel</button>
+            <!-- Footer -->
+            <div class="modal-footer justify-content-center" style="border-top: 1px solid #ddd; padding: 15px;">
+                <button type="button" class="btn fw-bold px-4" style="background-color: #ffc107; color: black; border: none;" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn fw-bold px-4" style="background-color: #ffc107; color: black; border: none;">Save</button>
             </div>
         </div>
     </div>
