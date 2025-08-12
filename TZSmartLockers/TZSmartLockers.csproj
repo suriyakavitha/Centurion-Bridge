@@ -13,4 +13,8 @@
     <None Remove="Views\NewFolder3\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\data\Eventlogs2.json" />
+  </ItemGroup>
+
 </Project>

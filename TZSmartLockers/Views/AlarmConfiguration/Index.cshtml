@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Alerm Configuration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <h1 class="fw-bold page-title">Alerm Configuration</h1>
+
+    <div class="card shadow-lg" style="border-radius: 12px; background: white;">
+        <div class="table-responsive">
+            <table class="table align-middle device-status-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Source</th>
+                        <th>Current reading</th>
+                        <th>Trigger</th>
+                        <th>Reset</th>
+                        <th>Trigger</th>
+                        <th>Reset</th>
+                        <th>Action</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="deviceTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

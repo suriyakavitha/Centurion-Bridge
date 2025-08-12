@@ -1,0 +1,46 @@
+[
+  {
+    "PrimaryName": "0000000001",
+    "SecondaryName": "000001E34",
+    "DeviceStatus": "-",
+    "Input1Type": "-",
+    "Input2Type": "-",
+    "Output1Type": "-",
+    "Output2Type": "-",
+    "UnlockTimeout": "-",
+    "Edit": true
+  },
+  {
+    "PrimaryName": "0000000002",
+    "SecondaryName": "000006656",
+    "DeviceStatus": "LOCKED",
+    "Input1Type": "Unconfigured",
+    "Input2Type": "Contact Closure",
+    "Output1Type": "Red Locked",
+    "Output2Type": "Green Open",
+    "UnlockTimeout": "30 sec",
+    "Edit": true
+  },
+  {
+    "PrimaryName": "0000000003",
+    "SecondaryName": "000005449",
+    "DeviceStatus": "LOCKED",
+    "Input1Type": "Unconfigured",
+    "Input2Type": "Unconfigured",
+    "Output1Type": "Locked Indicator",
+    "Output2Type": "Open Indicator",
+    "UnlockTimeout": "30 sec",
+    "Edit": true
+  },
+  {
+    "PrimaryName": "0000000004",
+    "SecondaryName": "0000073EB",
+    "DeviceStatus": "LOCKED",
+    "Input1Type": "Unconfigured",
+    "Input2Type": "Contact Closure",
+    "Output1Type": "Red Locked",
+    "Output2Type": "Green Open",
+    "UnlockTimeout": "30 sec",
+    "Edit": true
+  }
+]

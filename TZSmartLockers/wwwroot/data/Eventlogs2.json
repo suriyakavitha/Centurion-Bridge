@@ -1,0 +1,58 @@
+[
+  {
+    "dateTimeE": "10 Apr 2025 03:59:52",
+    "nameE": "admin",
+    "primaryNameE": "BRIDGE",
+    "secondaryNameE": "myBridge",
+    "descriptionE": "Clearing Server Mode"
+  },
+  {
+    "dateTimeE": "10 Apr 2025 03:59:52",
+    "nameE": "admin",
+    "primaryNameE": "BRIDGE",
+    "secondaryNameE": "-",
+    "descriptionE": "user login"
+  },
+  {
+    "dateTimeE": "10 Apr 2025 01:12:14",
+    "nameE": "admin",
+    "primaryNameE": "BRIDGE",
+    "secondaryNameE": "myBridge",
+    "descriptionE": "Device Discovery complete : 00 devices aClicled"
+  },
+  {
+    "dateTimeE": "10 Apr 2025 01:11:59",
+    "nameE": "admin",
+    "primaryNameE": "BRIDGE",
+    "secondaryNameE": "myBridge",
+    "descriptionE": "Device Discovery Initiated : 04 devices in database"
+  },
+  {
+    "dateTimeE": "10 Apr 2025 01:11:13",
+    "nameE": "BRIDGE",
+    "primaryNameE": "myBridge",
+    "secondaryNameE": "-",
+    "descriptionE": "Entering Server Mode"
+  },
+  {
+    "dateTimeE": "10 Apr 2025 01:11:13",
+    "nameE": "admin",
+    "primaryNameE": "BRIDGE",
+    "secondaryNameE": "myBridge",
+    "descriptionE": "Clearing Server Mode"
+  },
+  {
+    "dateTimeE": "10 Apr 2025 01:11:13",
+    "nameE": "admin",
+    "primaryNameE": "-",
+    "secondaryNameE": "-",
+    "descriptionE": "User Login"
+  },
+  {
+    "dateTimeE": "09 Apr 2025 23:58:53",
+    "nameE": "-",
+    "primaryNameE": "000000002",
+    "secondaryNameE": "000006656",
+    "descriptionE": "Device Locked"
+  }
+]

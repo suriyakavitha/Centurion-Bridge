@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "System";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <div class="current-datetime">10 April 2025 04:01:02</div>
+    <h1 class="system-title">System</h1>
+    <div class="card shadow-lg" style="border-radius: 12px; background: white;">
+        <div class="system-wrapper">
+            <h5 class="section-title">About this Centurion™ Bridge</h5>
+
+            <table class="system-info-table">
+                <tr>
+                    <td>Current Date/Time</td>
+                    <td>10-APR-2025 04:39:03</td>
+                </tr>
+                <tr>
+                    <td>Centurion Server IP</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Product</td>
+                    <td>TZ Centurion™ Bridge</td>
+                </tr>
+                <tr>
+                    <td>Firmware</td>
+                    <td>2.0.7</td>
+                </tr>
+                <tr>
+                    <td>Web UI version</td>
+                    <td>0.0.2.05</td>
+                </tr>
+                <tr>
+                    <td>Serial Number</td>
+                    <td>000454FF28</td>
+                </tr>
+                <tr>
+                    <td>Batch Code</td>
+                    <td>J-02-14</td>
+                </tr>
+                <tr>
+                    <td>Build Date</td>
+                    <td>14 Feb 2017</td>
+                </tr>
+                <tr>
+                    <td>MAC Address</td>
+                    <td>00-04-A3-64-FF-28</td>
+                </tr>
+            </table>
+
+            <div class="settings-section" style="position: absolute; top: 35px; right: 50px;">
+                <form>
+                    <div class="settings-form-group">
+                        <label class="settings-label">Primary Name <span class="required">*</span></label>
+                        <input type="text" class="form-control" value="" readonly>
+                    </div>
+                    <div class="settings-form-group">
+                        <label class="settings-label">Secondary Name <span class="required">*</span></label>
+                        <input type="text" class="form-control" value="">
+                    </div>
+                    <div class="settings-form-group">
+                        <label class="settings-label">Temperature Unit</label>
+                        <input type="text" class="form-control" value="" readonly>
+                    </div>
+
+                    <div style="margin-top: 15px;">
+                        <button type="submit" class="btn btn-custom">Save</button>
+                        <button type="reset" class="btn btn-custom">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div style="margin-top: 40px;">
+    <button class="license-button">
+        <span class="download-icon">⬇</span>
+        License Agreement
+    </button>
+</div>

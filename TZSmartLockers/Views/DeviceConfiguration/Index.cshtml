@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Device Configuration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .btn-warning {
+        border-radius: 8px;
+        padding: 8px 16px;
+        font-size: 0.95rem;
+    }
+
+</style>
+<div class="container-fluid">
+    <h1 class="fw-bold page-title">Device Configuration</h1>
+
+    <div class="card shadow-lg" style="border-radius: 12px; background: white;">
+        <div class="table-responsive">
+            <table class="table align-middle device-status-table">
+                <thead>
+                    <tr>
+                        <th>Primary Name</th>
+                        <th>Secondary Name</th>
+                        <th>Device Status</th>
+                        <th>Input 1 Type</th>
+                        <th>Input 2 Type</th>
+                        <th>Output 1 Type</th>
+                        <th>Output 2 Type</th>
+                        <th>Unlock Timeout</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody id="deviceTableBody">
+                </tbody>
+            </table>
+            <div class="d-flex justify-content-center gap-3 p-3">
+                <a href="/logs/AlarmLogs.json" class="btn btn-warning fw-semibold">
+                    Download Alarm Logs
+                </a>
+                <a href="/logs/EventLogs.json" class="btn btn-warning fw-semibold">
+                    Download Event Logs
+                </a>
+                <a href="/logs/SensorLogs.json" class="btn btn-warning fw-semibold">
+                    Download Sensor Logs
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    fetch('/data/DeviceConfigurationData.json')
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.getElementById('deviceTableBody');
+            tableBody.innerHTML = "";
+
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                        <td>${item.PrimaryName}</td>
+                        <td>${item.SecondaryName}</td>
+                        <td>${item.DeviceStatus}</td>
+                        <td>${item.Input1Type}</td>
+                        <td>${item.Input2Type}</td>
+                        <td>${item.Output1Type}</td>
+                        <td>${item.Output2Type}</td>
+                        <td>${item.UnlockTimeout}</td>
+                        <td><button class="btn btn-sm btn-warning">Edit</button></td>
+                    `;
+                tableBody.appendChild(row);
+            });
+        })
+        .catch(error => console.error("Error loading JSON:", error));
+</script>

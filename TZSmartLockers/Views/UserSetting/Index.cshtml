@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "User Settings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <h1 class="user-settings-title">User Settings</h1>
+    <div class="card shadow-lg" style="border-radius: 12px; background: white;">
+        <div class="user-settings-wrapper">
+            <h5 class="fw-semibold mb-4">User Information</h5>
+            <form>
+                <div class="form-group">
+                    <label class="form-label">Login Name *</label>
+                    <input type="text" class="form-control" id="loginName">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password *</label>
+                    <div class="password-wrapper">
+                        <input type="password" class="form-control" id="password">
+                        <span class="toggle-password" onclick="togglePassword('password')">👁</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Confirm Password *</label>
+                    <div class="password-wrapper">
+                        <input type="password" class="form-control" id="confirmPassword">
+                        <span class="toggle-password" onclick="togglePassword('confirmPassword')">👁</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Full Name *</label>
+                    <input type="text" class="form-control" id="fullName">
+                </div>
+                <div class="button-row">
+                    <button type="submit" class="btn btn-custom">Save</button>
+                    <button type="reset" class="btn btn-custom">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function togglePassword(id) {
+        const input = document.getElementById(id);
+        input.type = (input.type === "password") ? "text" : "password";
+    }
+</script> 

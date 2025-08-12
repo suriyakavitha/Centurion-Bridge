@@ -1,0 +1,197 @@
+﻿.system-wrapper {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 0;
+}
+
+.system-title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.section-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.current-datetime {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.system-info-table {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+    .system-info-table tr {
+        height: 35px;
+    }
+
+    .system-info-table td:first-child {
+        width: 150px;
+        font-weight: 500;
+        color: #666;
+        vertical-align: middle;
+    }
+
+    .system-info-table td:last-child {
+        font-weight: 600;
+        color: #333;
+        vertical-align: middle;
+    }
+
+.settings-section {
+    margin-top: 40px;
+}
+
+.settings-form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.settings-label {
+    font-weight: 600;
+    width: 150px;
+    margin-bottom: 0;
+    margin-right: 20px;
+    display: block;
+}
+
+.required {
+    color: red;
+}
+
+.form-control {
+    background: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 14px;
+    width: 200px;
+    text-align: left;
+}
+
+.btn-custom {
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+    .btn-custom:hover {
+        background-color: #e6b800;
+    }
+
+.button-row {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.license-button {
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+}
+
+    .license-button:hover {
+        background-color: #e6b800;
+    }
+
+.download-icon {
+    margin-right: 8px;
+    font-size: 16px;
+}
+.user-settings-wrapper {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: none; /* Remove max-width constraint */
+    margin: 0; /* Remove auto margin that centers content */
+}
+
+.user-settings-title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left; /* Align title to left */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-weight: 600;
+    width: 150px;
+    margin-bottom: 0;
+    margin-right: 20px;
+    display: block;
+}
+
+.form-control {
+    background: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 14px;
+    width: 250px;
+    text-align: left;
+}
+
+.password-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.btn-custom {
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+    .btn-custom:hover {
+        background-color: #e6b800;
+    }
+
+.button-row {
+    text-align: center; /* Align buttons to center */
+    padding-top: 20px;
+}
+
+.card {
+    margin-left: 0; /* Ensure card starts from left */
+}
