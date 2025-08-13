@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string currentController = ViewContext.RouteData.Values["Controller"]?.ToString();
+    string currentAction = ViewContext.RouteData.Values["Action"]?.ToString();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -19,32 +24,45 @@
             <div class="logo d-flex align-items-center mb-4">
                 <img src="/images/tz-logo.png" width="40" alt="TZ Logo" />
                 <span class="ms-2"><strong>Data<br />Cabinet<br />Security</strong></span>
-            </div>
-            <a asp-controller="DeviceStatus" asp-action="Index" class="nav-link">
+            </div>           
+            <a asp-controller="DeviceStatus" asp-action="Index"
+               class="nav-link @(currentController == "DeviceStatus" ? "active" : "")">
                 <i class="fa fa-table me-2"></i> Device Status
             </a>
-            <a href="@Url.Action("Index", "EventLogs")" class="nav-link"><i class="fa fa-clock me-2"></i>Event Logs</a>
-            <a class="nav-link" data-bs-toggle="collapse" href="#usersSubMenu" role="button" aria-expanded="false" aria-controls="usersSubMenu">
+            <a href="@Url.Action("Index", "EventLogs")" class="nav-link @(currentController == "EventLogs" ? "active" : "")">
+                <i class="fa fa-clock me-2"></i> Event Logs
+            </a>
+            @{
+                bool isUserMenuActive = currentController == "Users";
+            }
+            <a class="nav-link @(isUserMenuActive ? "active" : "")" data-bs-toggle="collapse"
+               href="#usersSubMenu" aria-expanded="@isUserMenuActive" aria-controls="usersSubMenu">
                 <i class="fa fa-users"></i>Users
             </a>
-            <div class="collapse ps-4 menu-background" id="usersSubMenu">
-                <a href="@Url.Action("Logins", "Users")" class="nav-link">Logins</a>
-                <a href="@Url.Action("RFID", "Users")" class="nav-link">RFID</a>
+            <div class="collapse ps-4 menu-background @(isUserMenuActive ? "show" : "")" id="usersSubMenu">
+                <a href="@Url.Action("Logins", "Users")" class="nav-link @(currentController == "Users" && currentAction == "Logins" ? "sub-active" : "")">Logins</a>
+                <a href="@Url.Action("RFID", "Users")" class="nav-link @(currentController == "Users" && currentAction == "RFID" ? "sub-active" : "")">RFID</a>
             </div>
-            <a href="@Url.Action("Index", "AlarmConfiguration")" class="nav-link"><i class="fa fa-bell"></i>Alarm Configuration</a>
-            <a href="@Url.Action("Index", "DeviceConfiguration")" class="nav-link"><i class="fa fa-microchip"></i>Device Configuration</a>
-            <a class="nav-link" data-bs-toggle="collapse" href="#systemsSubMenu" role="button" aria-expanded="false" aria-controls="systemsSubMenu">
-                <i class="fa fa-cogs"></i>System</a>
-            <div class="collapse ps-4 menu-background" id="systemsSubMenu">
-                <a href="@Url.Action("Index", "AboutCenturion")" class="nav-link"> About this Centurion™ Bridge</a>
-                <a href="@Url.Action("Settings", "System")" class="nav-link"> Settings</a>
-                <a href="@Url.Action("SNMP", "System")" class="nav-link"> SNMP</a>
-                <a href="@Url.Action("Auxilllary IO", "System")" class="nav-link">  Auxilllary IO</a>
+            <a href="@Url.Action("Index", "AlarmConfiguration")" class="nav-link @(currentController == "AlarmConfiguration" ? "active" : "")"><i class="fa fa-bell"></i>Alarm Configuration</a>
+            <a href="@Url.Action("Index", "DeviceConfiguration")" class="nav-link @(currentController == "DeviceConfiguration" ? "active" : "")"><i class="fa fa-microchip"></i>Device Configuration</a>
+            @{
+                bool isSystemMenuActive = currentController == "AboutCenturion" || currentController == "System";
+            }
+            <a class="nav-link @(isSystemMenuActive ? "active" : "")" data-bs-toggle="collapse"
+               href="#systemsSubMenu" aria-expanded="@isSystemMenuActive" aria-controls="systemsSubMenu">
+                <i class="fa fa-cogs"></i>System
+            </a>
+            <div class="collapse ps-4 menu-background @(isSystemMenuActive ? "show" : "")" id="systemsSubMenu">
+                <a href="@Url.Action("Index", "AboutCenturion")" class="nav-link @(currentController == "AboutCenturion" ? "sub-active" : "")"> About this Centurion™ Bridge</a>
+                <a href="@Url.Action("Settings", "System")" class="nav-link @(currentController == "System" && currentAction == "Settings" ? "sub-active" : "")"> Settings</a>
+                <a href="@Url.Action("SNMP", "System")" class="nav-link @(currentController == "System" && currentAction == "SNMP" ? "sub-active" : "")"> SNMP</a>
+                <a href="@Url.Action("Auxilllary IO", "System")" class="nav-link @(currentController == "System" && currentAction == "Auxilllary IO" ? "sub-active" : "")"> Auxilllary IO</a>
             </div>
-
-            <a href="@Url.Action("Index", "UserSetting")" class="nav-link"><i class="fa fa-user-cog"></i>User Settings</a>
+                       
+            <a href="@Url.Action("Index", "UserSetting")" class="nav-link @(currentController == "UserSetting" ? "active" : "")"><i class="fa fa-user-cog"></i>User Settings</a>
             <hr class="hr-line-solid m-b-none" />
-            <a asp-controller="Login" asp-action="Logout" class="nav-link">
+            <a asp-controller="Login" asp-action="Logout"
+               class="nav-link @(currentController == "Login" && currentAction == "Logout" ? "active" : "")">
                 <i class="fa fa-sign-out-alt"></i>LogOut
             </a>
         </div>

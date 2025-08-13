@@ -50,6 +50,11 @@
         .sidebar .nav-link:hover {
             background-color: #ffcc00;
         }
+        .sidebar .nav-link.sub-active {
+            background-color: #FFE082;
+            color: black !important;
+            font-weight: bold;
+        }
 
         .sidebar .nav-link i {
             margin-right: 10px;
