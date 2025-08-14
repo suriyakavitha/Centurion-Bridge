@@ -2,72 +2,56 @@
     ViewData["Title"] = "System";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    .symbol-cell {
+        text-align: start;
+       
+    }
+
+    .circular-symbol {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+</style>
 <div class="container-fluid">
-    <div class="current-datetime">10 April 2025 04:01:02</div>
-    <h1 class="system-title">System</h1>
-    <div class="card shadow-lg" style="border-radius: 12px; background: white;">
-        <div class="system-wrapper">
-            <h5 class="section-title">About this Centurion™ Bridge</h5>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="fw-bold page-title mb-0">System</h1>
+        <h3 class="timedate" id="liveDateTime"></h3>
+    </div>
+    <div class="card shadow-sm" style="border-radius: 12px; padding: 0; overflow: hidden;">
+        <div class="user-settings-wrapper">
+            <h3 class="fw-semibold mb-4">About this Centurion™ Bridge</h3>
+            <div class="table-responsive" style="display: flex; align-items: flex-start;">
+                
+                <table class="system-info-table">
+                    <tbody id="deviceTableBody"></tbody>
+                </table>
+            
+                <div class="center-line"></div>
+                <div class="settings-section">
+                    <form>
+                        <div class="settings-form-group">
+                            <label class="settings-label">Primary Name <span class="required">*</span></label>
+                            <input type="text" class="form-control" value="">
+                        </div>
+                        <div class="settings-form-group">
+                            <label class="settings-label">Secondary Name <span class="required">*</span></label>
+                            <input type="text" class="form-control" value="">
+                        </div>
+                        <div class="settings-form-group">
+                            <label class="settings-label">Temperature Unit</label>
+                            <input type="text" class="form-control" value="">
+                        </div>
 
-            <table class="system-info-table">
-                <tr>
-                    <td>Current Date/Time</td>
-                    <td>10-APR-2025 04:39:03</td>
-                </tr>
-                <tr>
-                    <td>Centurion Server IP</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Product</td>
-                    <td>TZ Centurion™ Bridge</td>
-                </tr>
-                <tr>
-                    <td>Firmware</td>
-                    <td>2.0.7</td>
-                </tr>
-                <tr>
-                    <td>Web UI version</td>
-                    <td>0.0.2.05</td>
-                </tr>
-                <tr>
-                    <td>Serial Number</td>
-                    <td>000454FF28</td>
-                </tr>
-                <tr>
-                    <td>Batch Code</td>
-                    <td>J-02-14</td>
-                </tr>
-                <tr>
-                    <td>Build Date</td>
-                    <td>14 Feb 2017</td>
-                </tr>
-                <tr>
-                    <td>MAC Address</td>
-                    <td>00-04-A3-64-FF-28</td>
-                </tr>
-            </table>
 
-            <div class="settings-section" style="position: absolute; top: 35px; right: 50px;">
-                <form>
-                    <div class="settings-form-group">
-                        <label class="settings-label">Primary Name <span class="required">*</span></label>
-                        <input type="text" class="form-control" value="" readonly>
-                    </div>
-                    <div class="settings-form-group">
-                        <label class="settings-label">Secondary Name <span class="required">*</span></label>
-                        <input type="text" class="form-control" value="">
-                    </div>
-                    <div class="settings-form-group">
-                        <label class="settings-label">Temperature Unit</label>
-                        <input type="text" class="form-control" value="" readonly>
-                    </div>
-
-                    <div style="margin-top: 15px;">
+                    </form>
+                    <div class="SystemButton">
                         <button type="submit" class="btn btn-custom">Save</button>
                         <button type="reset" class="btn btn-custom">Cancel</button>
                     </div>
-                </form>
+                </div>
             </div>
 
 
@@ -80,3 +64,52 @@
         License Agreement
     </button>
 </div>
+
+@section Scripts {
+    <script>
+        fetch('/data/AboutCenturion.json')
+            .then(response => response.json())
+            .then(data => {
+                let tableBody = document.getElementById('deviceTableBody');
+                tableBody.innerHTML = data.map(item => `
+                                    <tr><td>Current Date/Time</td><td class="currentDateTimeCell" style="font-weight: bold; font-size:16px;"></td><td class="symbol-cell"><button class="circular-symbol"><i class="fas fa-chevron-right"></i></button></td></tr>
+                            <tr><td>Centurion Server IP</td><td>${item.CenturionServer}</td></tr>
+                            <tr><td>Product</td><td>${item.Product}</td></tr>
+                            <tr><td>Firmware</td><td>${item.Firmware}</td></tr>
+                            <tr><td>Web UI version</td><td>${item.WebUIversion}</td></tr>
+                            <tr><td>Serial Number</td><td>${item.SerialNumber}</td></tr>
+                            <tr><td>Batch Code</td><td>${item.BatchCode}</td></tr>
+                            <tr><td>Build Date</td><td>${item.BuildDate}</td></tr>
+                            <tr><td>MAC Address</td><td>${item.MACAddress}</td></tr>
+                        `).join('');
+
+                updateLiveDateTime();
+            })
+            .catch(error => console.error("Error loading JSON:", error));
+
+        function updateLiveDateTime() {
+            const now = new Date();
+            const day = now.getDate().toString().padStart(2, '0');
+            const monthNames = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            const month = monthNames[now.getMonth()];
+            const year = now.getFullYear();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            const formatted = `${day} ${month} ${year} ${hours}:${minutes}:${seconds}`;
+
+            document.getElementById('liveDateTime').innerText = formatted;
+
+            document.querySelectorAll('.currentDateTimeCell').forEach(cell => {
+                cell.innerText = formatted;
+            });
+        }
+
+        setInterval(updateLiveDateTime, 1000);
+
+    </script>
+}

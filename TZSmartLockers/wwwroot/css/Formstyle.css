@@ -29,6 +29,7 @@
 .system-info-table {
     width: 100%;
     margin-bottom: 30px;
+    font-size: 16px;
 }
 
     .system-info-table tr {
@@ -36,20 +37,24 @@
     }
 
     .system-info-table td:first-child {
-        width: 150px;
+        width: 230px;
         font-weight: 500;
         color: #666;
         vertical-align: middle;
     }
 
     .system-info-table td:last-child {
-        font-weight: 600;
+        font-weight: bold;
         color: #333;
         vertical-align: middle;
     }
 
 .settings-section {
-    margin-top: 40px;
+    position: relative;
+    margin-right: 40px;
+    margin-top: 5px;
+    width: 450px;
+    font-size: 16px;
 }
 
 .settings-form-group {
@@ -77,8 +82,9 @@
     border-radius: 5px;
     padding: 6px 10px;
     font-size: 14px;
-    width: 200px;
+    width: 270px;
     text-align: left;
+    font-weight: bold;
 }
 
 .btn-custom {

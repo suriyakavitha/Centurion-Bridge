@@ -3,13 +3,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="container-fluid">
-    <h1 class="fw-bold mb-3" style="font-size: 2rem;">Users</h1>
+    <div class="d-flex justify-content-between align-items-center mb-3" style="margin-top: 7px;">
+        <h1 class="fw-bold page-title mb-0">Users</h1>
+        <h3 class="timedate" id="liveDateTime"></h3>
+    </div>
 
     <div class="card shadow-sm" style="border-radius: 12px;">
         <div class="table-responsive">
-            <h3 class="card-text" style="padding: 12px 10px; margin: 0;">Logins</h3>
-            <table class="table align-middle mb-0">
-                <thead cclass="padding-top:None;">
+            <h3 class="card-text" style="padding: 12px 6px; margin: 0;">Logins</h3>
+            <table class="table align-middle mb-0" style="font-weight:bold;">
+                <thead class="padding-top:None;" style="font-size:16px;">
                     <tr>
                         <th>User Name</th>
                         <th>Something</th>
@@ -43,40 +46,62 @@
 
                 data.forEach(user => {
                     let permissionsHTML = `
-                        <div class="form-check">
-                            <input class="custom-checkbox" type="checkbox" ${user.Permissions["Devices"] ? "checked" : ""}>
-                            <label class="form-check-label">Devices</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="custom-checkbox" type="checkbox" ${user.Permissions["System"] ? "checked" : ""}>
-                            <label class="form-check-label">System</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="custom-checkbox" type="checkbox" ${user.Permissions["Alarm Configuration"] ? "checked" : ""}>
-                            <label class="form-check-label">Alarm Configuration</label>
-                        </div>
-                    `;
+                                <div class="form-check">
+                                    <input class="custom-checkbox" type="checkbox" ${user.Permissions["Devices"] ? "checked" : ""}>
+                                    <label class="form-check-label">Devices</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="custom-checkbox" type="checkbox" ${user.Permissions["System"] ? "checked" : ""}>
+                                    <label class="form-check-label">System</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="custom-checkbox" type="checkbox" ${user.Permissions["Alarm Configuration"] ? "checked" : ""}>
+                                    <label class="form-check-label">Alarm Configuration</label>
+                                </div>
+                            `;
 
                     tbody.innerHTML += `
-                        <tr>
-                            <td>${user.UserName}</td>
-                            <td>${user.Value1}</td>
-                            <td>${user.Value2}</td>
-                            <td>${user.Value3}</td>
-                            <td class="permissions-cell">${permissionsHTML}</td>
-                            <td>
-                                <button class="circular-symbol" title="View Details">
-                                    <i class="fas fa-chevron-right"></i>
-                                </button>
-                                <button class="cross-symbol" title="Remove">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </td>
-                        </tr>
-                    `;
+                               <tr style="margin-top: 30px;">
+                                    <td>${user.UserName}</td>
+                                    <td>${user.Value1}</td>
+                                    <td>${user.Value2}</td>
+                                    <td>${user.Value3}</td>
+                                    <td class="permissions-cell">${permissionsHTML}</td>
+                                    <td>
+                                        <button class="circular-symbol" title="View Details">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                        <button class="cross-symbol" title="Remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            `;
                 });
             })
             .catch(error => console.error("Error loading JSON:", error));
+
+        function updateLiveDateTime() {
+            const now = new Date();
+
+            const day = now.getDate().toString().padStart(2, '0');
+            const monthNames = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            const month = monthNames[now.getMonth()];
+            const year = now.getFullYear();
+
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            const formatted = `${day} ${month} ${year} ${hours}:${minutes}:${seconds}`;
+            document.getElementById('liveDateTime').innerText = formatted;
+        }
+
+        setInterval(updateLiveDateTime, 1000);
+        updateLiveDateTime();
     </script>
 }
 
@@ -157,3 +182,4 @@
         </div>
     </div>
 </div>
+

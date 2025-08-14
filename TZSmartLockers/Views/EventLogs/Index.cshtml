@@ -4,18 +4,16 @@
 }
 
 <div class="container-fluid">
-    <div style="display: flex; align-items: center; gap: 1rem;">
+    <div class="d-flex justify-content-between align-items-center mb-3" style="margin-top: 7px;">
         <h1 class="fw-bold page-title mb-0">Event Logs</h1>
-        <h3 id="liveDateTime" style="white-space: nowrap; font-weight: normal; border-radius: 12px; background: white; margin-left: auto; padding: 4px 8px;"></h3>
-
+        <h3 class="timedate" id="liveDateTime"></h3>
     </div>
 
- <div class="card shadow-lg" style="border-radius: 12px; background: white;">
+    <div class="card shadow-lg" style="border-radius: 12px; background: white;">
         <div class="table-responsive">
-            <h2>Alarm Logs</h2>
-            <table class="table align-middle">
-                
-                <thead>
+            <h3 class="card-text" style="padding: 18px 2px; margin: 0;">Alarm Logs</h3>
+            <table class="table align-middle" style="font-size:16px;">
+                <thead style="font-weight:bold;">
                     <tr>
                         <th>Date / Time</th>
                         <th>Alarm Title</th>
@@ -24,29 +22,29 @@
                         <th>Alarm Description</th>
                     </tr>
                 </thead>
-                <tbody id="deviceTableBody">
+                <tbody id="deviceTableBody" style="font-weight:600;">
                 </tbody>
             </table>
         </div>
         <div class="pagination-wrapper">
             <div class="pagination-controls">
                 <span>Page</span>
-                <button disabled>&lt;</button>
-                <span>1</span>
-                <button disabled>&gt;</button>
+                <button class="Page-Number-icons"><i class="fas fa-chevron-left"></i></button>
+                <span class="Page-Number">1</span>
+                <button class="Page-Number-icons"><i class="fas fa-chevron-right"></i></button>
                 <span>of 4 pages </span>
             </div>
         </div>
     </div>
 </div>
-<div class="container-fluid">
-    
+
+<div class="container-fluid" style="padding-top: 15px;"> 
     <div class="card shadow-lg" style="border-radius: 12px; background: white;">
         <div class="table-responsive">
-            <h2>Event Logs</h2>
-            <table class="table align-middle">
+            <h3 class="card-text" style="padding: 18px 2px; margin: 0;">Event Logs</h3>
+            <table class="table align-middle" style="font-size:16px; margin-bottom:0; border-collapse:collapse;">
 
-                <thead>
+                <thead style="font-weight:bold;">
                     <tr>
                         <th>Date / Time</th>
                         <th>Name</th>
@@ -55,18 +53,18 @@
                         <th>Alarm Description</th>
                     </tr>
                 </thead>
-                <tbody id="deviceTableBodyE">
+                <tbody id="deviceTableBodyE" style="font-weight:600;">
                 </tbody>
             </table>
         </div>
         <div class="pagination-wrapper">
             <div class="pagination-controls">
                 <span>Page</span>
-                <button disabled>&lt;</button>
-                <span>1</span>
-                <button disabled>&gt;</button>
+                <button class="Page-Number-icons"><i class="fas fa-chevron-left"></i></button>
+                <span class="Page-Number">1</span>
+                <button class="Page-Number-icons"><i class="fas fa-chevron-right"></i></button>
                 <span>of 15 pages </span>
-            </div> 
+            </div>
         </div>
     </div>
 </div>
@@ -81,20 +79,20 @@
 
                 data.forEach(item => {
                     let row = `
-                                <tr>
-                                    <td>${item.DateTime}</td>
-                                    <td>${item.AlarmTitle}</td>
-                                    <td>${item.PrimaryName}</td>
-                                    <td>${item.SecondaryName}</td>
-                                    <td>${item.AlarmDescription}</td>
-                                </tr>
-                            `;
+                                        <tr style="height:40px;">
+                                            <td>${item.DateTime}</td>
+                                            <td>${item.AlarmTitle}</td>
+                                            <td>${item.PrimaryName}</td>
+                                            <td>${item.SecondaryName}</td>
+                                            <td>${item.AlarmDescription}</td>
+                                        </tr>
+                                    `;
                     tableBody.innerHTML += row;
                 });
             })
             .catch(error => console.error("Error loading JSON:", error));
 
-            // Eventlogs
+        // Eventlogs
         fetch('/data/Eventlogs2.json')
             .then(response => response.json())
             .then(data => {
@@ -103,14 +101,14 @@
 
                 data.forEach(item => {
                     let row = `
-                                        <tr>
-                                            <td>${item.dateTimeE}</td>
-                                            <td>${item.nameE}</td>
-                                            <td>${item.primaryNameE}</td>
-                                            <td>${item.secondaryNameE}</td>
-                                            <td>${item.descriptionE}</td>
-                                        </tr>
-                                    `;
+                                                <tr style="height:40px;">
+                                                    <td>${item.dateTimeE}</td>
+                                                    <td>${item.nameE}</td>
+                                                    <td>${item.primaryNameE}</td>
+                                                    <td>${item.secondaryNameE}</td>
+                                                    <td>${item.descriptionE}</td>
+                                                </tr>
+                                            `;
                     tableBody.innerHTML += row;
                 });
             })
@@ -137,6 +135,6 @@
 
         setInterval(updateLiveDateTime, 1000);
         updateLiveDateTime();
- 
+
     </script>
 }

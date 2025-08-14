@@ -3,11 +3,12 @@
     font-family: 'Segoe UI', sans-serif;
 }
 .page-title {
-    padding-top:0px;
-    padding-bottom:10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
     font-size: 3rem;
     color: #000;
     padding-left: 0;
+    margin-top: 7px;
 }
 
 .sidebar {
@@ -118,9 +119,12 @@
     border-bottom: 2px solid #ccc;
     height:60px;
 }
+.tr-height {
+    height:40px;
+}
 
     .table tbody tr:first-child {
-        border-top:5px solid #ccc ;
+    border-top: 5px solid #ccc;
     }
 
 .lock-rotate-down {
@@ -319,4 +323,10 @@
         margin-top: 90px;
         width: 100%;
     }
+}
+
+.timedate{
+    padding: 14px 38px;
+    background-color: white;
+    border-radius: 12px;
 }
