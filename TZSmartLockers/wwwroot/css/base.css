@@ -323,7 +323,7 @@ body.body-small .footer.fixed {
     }
 
 .table > thead > tr > th {
-    border-bottom: 1px solid #DDDDDD;
+    border-bottom: none;
     vertical-align: bottom;
 }
 
@@ -563,7 +563,7 @@ code {
     border-width: 1px 0;
 }
 
-.circular-symbol {
+/*.circular-symbol {
     color: black;
     font-size: 15px;
     font-weight: bold;
@@ -575,6 +575,20 @@ code {
     width: 10px;
     height: 10px;
     line-height: 9px;
+    border: none;
+}*/
+.circular-symbol {
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 1;
     border: none;
 }
 

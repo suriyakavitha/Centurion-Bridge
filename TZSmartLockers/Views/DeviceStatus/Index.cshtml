@@ -7,7 +7,7 @@
 <div class="container-fluid">
     <h1 class="fw-bold page-title">Device Status</h1>
 
-    <div class="card shadow-lg" style="border-radius: 12px; background: white;">
+    <div class="card shadow-lg" style="border-radius: 12px; background-color:#F2F2F2;">
         <div class="table-responsive">
             <table class="table align-middle device-status-table">
                 <thead>
@@ -75,9 +75,9 @@
                         <tr>
                             <td>${item.PrimaryName}</td>
                             <td>${item.SecondaryName}</td>
-                            <td class="${lockClass}">${lockIcon} ${item.LockStatus}</td>
+                            <td><i class="${lockClass}">${lockIcon}</i> ${item.LockStatus}</td>
                             <td>${item.Timeout}</td>
-                            <td class="${doorClass}">${doorIcon} ${item.DoorStatus}</td>
+                            <td><i class="${doorClass}">${doorIcon}</i> ${item.DoorStatus}</td>
                             <td>${item.Input1 || ''}</td>
                             <td>${item.Input2 || ''}</td>
                             <td>${item.Output1 || ''}</td>
