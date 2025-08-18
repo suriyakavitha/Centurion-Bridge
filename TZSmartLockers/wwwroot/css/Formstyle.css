@@ -156,15 +156,7 @@
     display: block;
 }
 
-.form-control {
-    background: #f2f2f2;
-    border: none;
-    border-radius: 5px;
-    padding: 6px 10px;
-    font-size: 14px;
-    width: 250px;
-    text-align: left;
-}
+
 
 .password-wrapper {
     position: relative;
@@ -194,10 +186,36 @@
     }
 
 .button-row {
-    text-align: center; /* Align buttons to center */
+    text-align: center; 
     padding-top: 20px;
 }
 
 .card {
-    margin-left: 0; /* Ensure card starts from left */
+    margin-left: 0; 
+}
+
+.SystemButton {
+    margin-top: 15px; 
+    margin-left: 170px;
+    display: flex;
+    gap: 10px; 
+    justify-content: flex-start; 
+}
+
+    .SystemButton .btn {
+        min-width: 80px; 
+        width: 180px;
+    }
+.Page-Number {
+    border: thin;
+    border-radius: 8px;
+    background-color: #eaeaea;
+    width: 80px;
+    text-align: center;
+    height: 30px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.Page-Number-icons {
+    background-color: #eaeaea;
 }

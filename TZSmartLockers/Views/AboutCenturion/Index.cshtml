@@ -16,10 +16,11 @@
 
 </style>
 <div class="container-fluid">
-    <div class="d-flex justify-content-between align-items-center mb-3">
+    <div class="d-flex justify-content-between align-items-center mb-3" style="margin-top: 7px;">
         <h1 class="fw-bold page-title mb-0">System</h1>
         <h3 class="timedate" id="liveDateTime"></h3>
     </div>
+
     <div class="card shadow-sm" style="border-radius: 12px; padding: 0; overflow: hidden;">
         <div class="user-settings-wrapper">
             <h3 class="fw-semibold mb-4">About this Centurion™ Bridge</h3>
@@ -72,7 +73,7 @@
             .then(data => {
                 let tableBody = document.getElementById('deviceTableBody');
                 tableBody.innerHTML = data.map(item => `
-                                    <tr><td>Current Date/Time</td><td class="currentDateTimeCell" style="font-weight: bold; font-size:16px;"></td><td class="symbol-cell"><button class="circular-symbol"><i class="fas fa-chevron-right"></i></button></td></tr>
+                                    <tr><td>Current Date/Time</td><td class="currentDateTimeCell" style="font-weight: bold; font-size:16px;" ></td><td class="symbol-cell"><button class="circular-symbol"><i class="fas fa-chevron-right"></i></button></td></tr>
                             <tr><td>Centurion Server IP</td><td>${item.CenturionServer}</td></tr>
                             <tr><td>Product</td><td>${item.Product}</td></tr>
                             <tr><td>Firmware</td><td>${item.Firmware}</td></tr>
