@@ -207,9 +207,9 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 18px;
-    height: 18px;
-    //border: 2px solid #ccc;
+    width: 21px;
+    height: 21px;
+   /* //border: 2px solid #ccc;*/
     border-radius: 4px;
     background-color: white;
     cursor: pointer;
@@ -219,17 +219,17 @@
 }
 
     .custom-checkbox:checked {
-        //border-color: #28a745;
+       /* //border-color: #28a745;*/
         border-color: none;
     }
 
         .custom-checkbox:checked::after {
             content: '';
             position: absolute;
-            top: 1px;
-            left: 5px;
-            width: 4px;
-            height: 9px;
+            top: 2px;
+            left: 6px;
+            width: 9px;
+            height: 14px;
             border: solid #28a745;
             border-width: 0 2px 2px 0;
             transform: rotate(45deg);
@@ -317,4 +317,7 @@
     background-color: #F2F2F2;
     border-radius: 12px;
     margin-top: 18px;
+}
+.table > thead > tr > th {
+    font-weight:bold;
 }
