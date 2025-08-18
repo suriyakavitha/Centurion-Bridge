@@ -187,21 +187,6 @@
     margin: 0 4px;
     transition: background 0.2s ease;
 }
-.cross-symbol {
-    color: red;
-    font-size: 15px;
-    font-weight: bold;
-    display: inline-block;
-    background-color: white;
-    border-radius: 100%;
-    padding: 8px;
-    text-align: center;
-    width: 10px;
-    height: 10px;
-    line-height: 9px;
-    border: none;
-    padding-left: 10px;
-}
 
 
 .permissions-cell {

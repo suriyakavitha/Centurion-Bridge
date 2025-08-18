@@ -80,7 +80,7 @@
     background: #E5E5E5;
     border: none;
     border-radius: 5px;
-    padding: 6px 10px;
+    padding: 6px 40px;
     font-size: 14px;
     width: 270px;
     text-align: left;
@@ -110,13 +110,15 @@
 .license-button {
     background-color: #ffcc00;
     color: black;
-    font-weight: bold;
+    font-weight: 450;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     margin-top: 30px;
     display: inline-flex;
     align-items: center;
+    font-size: 25px;
+    gap: 20px;
 }
 
     .license-button:hover {
@@ -196,7 +198,7 @@
 }
 
 .SystemButton {
-    margin-top: 15px; 
+    margin-top: 50px; 
     margin-left: 170px;
     display: flex;
     gap: 10px; 
@@ -219,4 +221,11 @@
 }
 .Page-Number-icons {
     background-color: #eaeaea;
+}
+.centerline {
+    position:relative; 
+    width: 5px; 
+    background-color: #E5E5E5; 
+    height: 310px;
+    margin: 0 35px;
 }
