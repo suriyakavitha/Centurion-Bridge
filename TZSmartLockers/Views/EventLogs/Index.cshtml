@@ -12,7 +12,9 @@
     <div class="card shadow-lg" style="border-radius: 12px; background-color:#F2F2F2;">
         <div class="table-responsive">
             <h3 class="card-text" style="padding: 18px 2px; margin: 0;">Alarm Logs</h3>
-            <table class="table align-middle" style="font-size:16px;">
+
+            <table class="table align-middle" style="font-size:16px; margin-bottom:0; border-collapse:collapse;">
+
                 <thead style="font-weight:bold;">
                     <tr>
                         <th>Date / Time</th>
@@ -84,11 +86,11 @@
 
             document.getElementById('deviceTableBody').innerHTML = pageData.map(item => `
                     <tr style="height:40px;">
-                                                            <td>${item.dateTime}</td>
-                                                            <td>${item.name}</td>
-                                                            <td>${item.primaryName}</td>
-                                                            <td>${item.secondaryName}</td>
-                                                            <td>${item.description}</td>
+                                                            <td>${item.DateTime}</td>
+                                                            <td>${item.AlarmTitle}</td>
+                                                            <td>${item.PrimaryName}</td>
+                                                            <td>${item.SecondaryName}</td>
+                                                            <td>${item.AlarmDescription}</td>
                                                         </tr>
 
                 `).join('');
