@@ -219,6 +219,16 @@
     font-weight: bold;
     font-size: 16px;
 }
+.event-page-number {
+    border: thin;
+    border-radius: 8px;
+    background-color: #eaeaea;
+    width: 80px;
+    text-align: center;
+    height: 30px;
+    font-weight: bold;
+    font-size: 16px;
+}
 .Page-Number-icons {
     background-color: #eaeaea;
 }

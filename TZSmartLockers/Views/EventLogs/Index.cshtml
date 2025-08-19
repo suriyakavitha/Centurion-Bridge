@@ -30,9 +30,9 @@
             <div class="pagination-controls">
                 <span>Page</span>
                 <button class="Page-Number-icons"><i class="fas fa-chevron-left"></i></button>
-                <span class="Page-Number">1</span>
+                <span class="Page-Number"></span>
                 <button class="Page-Number-icons"><i class="fas fa-chevron-right"></i></button>
-                <span>of 4 pages </span>
+                <span class="total-pages"></span>
             </div>
         </div>
     </div>
@@ -60,47 +60,70 @@
         <div class="pagination-wrapper">
             <div class="pagination-controls">
                 <span>Page</span>
-                <button class="Page-Number-icons"><i class="fas fa-chevron-left"></i></button>
-                <span class="Page-Number">1</span>
-                <button class="Page-Number-icons"><i class="fas fa-chevron-right"></i></button>
-                <span>of 15 pages </span>
+                <button class="event-prev"><i class="fas fa-chevron-left"></i></button>
+                <span class="event-page-number"></span>
+                <button class="event-next"><i class="fas fa-chevron-right"></i></button>
+                <span class="event-total-pages"></span>
             </div>
         </div>
     </div>
 </div>
 @section Scripts {
-    <script>
-        // Active logs
+    <script type="module">
+        import { attachPaginationControls } from '/js/pagination.js';
+
+        const rowsPerPage = { value: 5 };
+        const currentPage = { value: 1 };
+        const alarmData = { value: [] };
+
+        function renderPage() {
+            const totalPages = Math.ceil(alarmData.value.length / rowsPerPage.value);
+            const start = (currentPage.value - 1) * rowsPerPage.value;
+            const end = start + rowsPerPage.value;
+            const pageData = alarmData.value.slice(start, end);
+
+            document.getElementById('deviceTableBody').innerHTML = pageData.map(item => `
+                    <tr style="height:40px;">
+                                                            <td>${item.dateTime}</td>
+                                                            <td>${item.name}</td>
+                                                            <td>${item.primaryName}</td>
+                                                            <td>${item.secondaryName}</td>
+                                                            <td>${item.description}</td>
+                                                        </tr>
+
+                `).join('');
+
+            document.querySelector('.Page-Number').innerText = currentPage.value;
+            document.querySelector('.total-pages').innerText = `of ${totalPages} pages`;
+        }
+
         fetch('/data/EventLogs.json')
             .then(response => response.json())
             .then(data => {
-                let tableBody = document.getElementById('deviceTableBody');
-                tableBody.innerHTML = "";
-
-                data.forEach(item => {
-                    let row = `
-                                        <tr style="height:40px;">
-                                            <td>${item.DateTime}</td>
-                                            <td>${item.AlarmTitle}</td>
-                                            <td>${item.PrimaryName}</td>
-                                            <td>${item.SecondaryName}</td>
-                                            <td>${item.AlarmDescription}</td>
-                                        </tr>
-                                    `;
-                    tableBody.innerHTML += row;
-                });
+                alarmData.value = data;
+                renderPage();
             })
             .catch(error => console.error("Error loading JSON:", error));
 
-        // Eventlogs
-        fetch('/data/Eventlogs2.json')
-            .then(response => response.json())
-            .then(data => {
-                let tableBody = document.getElementById('deviceTableBodyE');
-                tableBody.innerHTML = "";
+        attachPaginationControls( currentPage, rowsPerPage, alarmData, renderPage, '.Page-Number-icons i.fas.fa-chevron-left', '.Page-Number-icons i.fas.fa-chevron-right' );
 
-                data.forEach(item => {
-                    let row = `
+
+
+
+        // Event Logs 
+        const eventRowsPerPage = { value: 5 };
+        const eventCurrentPage = { value: 1 };
+        const eventData = { value: [] };
+
+        function renderEventPage() {
+            const totalPages = Math.ceil(eventData.value.length / eventRowsPerPage.value);
+            const start = (eventCurrentPage.value - 1) * eventRowsPerPage.value;
+            const end = start + eventRowsPerPage.value;
+            const pageData = eventData.value.slice(start, end);
+
+
+            document.getElementById('deviceTableBodyE').innerHTML = pageData.map(item => `
+
                                                 <tr style="height:40px;">
                                                     <td>${item.dateTimeE}</td>
                                                     <td>${item.nameE}</td>
@@ -114,8 +137,7 @@
             })
             .catch(error => console.error("Error loading EventLogs JSON:", error));
 
-        function updateLiveDateTime() {
-            const now = new Date();
+            document.getElementById('deviceTableBodyE').innerHTML = pageData.map(item => `
 
             const day = now.getDate().toString().padStart(2, '0');
             const monthNames = [
@@ -125,16 +147,19 @@
             const month = monthNames[now.getMonth()];
             const year = now.getFullYear();
 
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            const seconds = now.getSeconds().toString().padStart(2, '0');
+            `).join('');
 
-            const formatted = `${day} ${month} ${year} ${hours}:${minutes}:${seconds}`;
-            document.getElementById('liveDateTime').innerText = formatted;
+            document.querySelector('.event-page-number').innerText = eventCurrentPage.value;
+            document.querySelector('.event-total-pages').innerText = `of ${totalPages} pages`;
         }
 
-        setInterval(updateLiveDateTime, 1000);
-        updateLiveDateTime();
+        fetch('/data/Eventlogs2.json')
+            .then(response => response.json())
+            .then(data => {
+                eventData.value = data;
+                renderEventPage();
+                attachPaginationControls( eventCurrentPage, eventRowsPerPage, eventData, renderEventPage, '.event-prev', '.event-next' );
+            });
 
     </script>
     <script type="module">
